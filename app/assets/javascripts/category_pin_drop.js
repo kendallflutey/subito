@@ -85,6 +85,7 @@ function initialize() {
   };
 
   var to_objects = function(hash) {
+
     var deal_list = [];
     $.each(hash, function(index, item){
       var deal = new Deal(item["id"], item["title"], item["description"], item["description"], item["finish_time"], item["deal_image"], item["business_id"], item["category_id"], item["latitude"], item["longitude"], item["finish_time"]);
@@ -92,15 +93,19 @@ function initialize() {
       deal_list.push(deal);
     });
     console.log(deal_list);
+    console.log("TO OBJECTS");
     return deal_list;
   };
 
   var process_deals = function(deals) {
+    console.log(deals);
+    console.log("MADE IT");
     var deal_list = to_objects(deals);
+
+  
 
     for (var i = 0; i < deal_list.length; i++) {
       var deal = deal_list[i];
-
 
       var myLatlng = new
        google.maps.LatLng(deal["latitude"], deal["longitude"]);

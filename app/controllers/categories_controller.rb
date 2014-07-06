@@ -1,3 +1,5 @@
+require 'pp'
+
 class CategoriesController < ApplicationController
 
 	def index
@@ -15,18 +17,18 @@ class CategoriesController < ApplicationController
     # @deals = Deal.where(category_id: @category.id)
     # pp cookies["lat_lng"]
     position = JSON.parse(cookies["lat_lng"])
-    # pp"############################"
-    # puts position
+    pp"############################"
+    pp position
     # puts position["latitude"]
     latitude = position["latitude"]
     longitude = position["longitude"]
     # pp "****************************************"
-    # pp latitude
-    # pp longitude
+    pp latitude
+    pp longitude
     # pp "**************************************"
-
+    pp Deal.all
     @deals = Deal.near([latitude, longitude], 1000)
-    # pp @deals
+    pp @deals
     # @categorized_deals = @deals.select { |deal| deal.category_id == (params[:id]) }
     render json: @deals
   end
