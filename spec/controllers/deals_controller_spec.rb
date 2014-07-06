@@ -30,27 +30,6 @@ describe DealsController do
 		end
 	end
 
-	describe "#show" do 
-
-		let(:deal) {FactoryGirl.create(:deal)}
-
-		before(:each) do 
-			get :show, id: deal
-		end
-
-		it "returns a specific deal" do 
-			expect(assigns(:deal)).to eq(deal)
-		end
-
-		it "response with OK" do 
-			response.code.should eq("200")
-		end
-
-		it "renders the show template" do 
-			response.should render_template("show")
-		end
-	end
-
 	describe "#new" do 
 
 		it "creates a new instance of Deal" do 
