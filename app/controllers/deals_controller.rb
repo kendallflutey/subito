@@ -3,7 +3,7 @@ class DealsController < ApplicationController
   before_filter :authenticate_business!
 
 	def index
-		@deals = Deal.all
+		@deals = Deal.where(business_id: current_business.id)
 	end
 
 	def new
