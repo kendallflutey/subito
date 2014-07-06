@@ -23,6 +23,7 @@ end
 gem 'jquery-rails'
 
 gem 'devise'
+gem 'omniauth-twitter'
 
 gem 'geocoder'
 
