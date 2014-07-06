@@ -6,6 +6,7 @@
 	<div class="new-deal-form-container">
 
 		<%= form_for @deal do |f| %>
+			<%= f.hidden_field :business_id, value: current_business.id %>
 
 			<%= f.label :title, "Give your deal a title" %><br />
 			<%= f.text_field :title, autofocus: true, placeholder: "Half Price Sushi", class: "new-deal-field" %><br/></br>

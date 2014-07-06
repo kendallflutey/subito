@@ -1,13 +1,9 @@
 class DealsController < ApplicationController
 
-	before_filter :load_deal, :only => [:show, :edit, :update, :destroy]
   before_filter :authenticate_business!
 
 	def index
 		@deals = Deal.all
-	end
-
-	def show
 	end
 
 	def new
@@ -24,12 +20,6 @@ class DealsController < ApplicationController
       p @deal.errors
       render :new
     end
-  end
-
-  private 
-
-  def load_deal
-    @deal = Deal.find(params[:id])
   end
 
 end
