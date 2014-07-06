@@ -15,6 +15,4 @@ class CategoriesController < ApplicationController
     render json: @deals
   end
 
-
-
 end

@@ -8,14 +8,17 @@ class DealsController < ApplicationController
 
 	def new
     	@deal = Deal.new
-  	end
+  end
+
+  def show
+  end
 
   def create
     @deal = Deal.new(params[:deal])
 
     if @deal.save
       flash[:notice] = "Deal was successfully created!"
-      redirect_to category_path(@deal.category_id)
+      redirect_to business_deals_path(current_business)
     else
       p @deal.errors
       render :new
