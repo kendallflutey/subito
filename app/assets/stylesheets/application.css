@@ -11,3 +11,23 @@
  *= require_self
  *= require_tree .
  */
+
+#business_nav {
+	float: right;
+	margin-right: 2%;
+	margin-top: 10px;
+	color: #FFF;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: lighter;
+}
+
+.biz-nav-text {
+	text-decoration: none;
+	font-size: 20px;
+	color: #FFF;
+}
+
+.nav-biz-left {
+	margin-right: 15px;
+	margin-left: 15px;
+}

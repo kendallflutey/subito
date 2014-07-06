@@ -1,18 +1,29 @@
-<h2>Sign up</h2>
+<div class="sign-up-login-container">
+	<div class="sign-up-login-logo"></div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+	<div class="sign-up-form-container">
+		<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+		  <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+		  <div><%= f.label :name, "Business Name" %><br />
+		  <%= f.text_field :name, autofocus: true, placeholder: "Awesomeness Limited", class: "sign-up-login-field"%></div><br/>
 
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+		  <div><%= f.label :email %><br />
+		  <%= f.email_field :email, placeholder: "awesome@business.com", class: "sign-up-login-field" %></div><br/>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+		  <div><%= f.label :address, "Business Address" %><br />
+		  <%= f.text_area :address, placeholder: "13 Awesome Street, Wellington, NZ", class: "sign-up-login-field address-field" %></div><br/>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+		  <div><%= f.label :phone %><br />
+		  <%= f.text_field :phone, placeholder: "03 321 4567", class: "sign-up-login-field" %></div><br/>
 
-<%= render "devise/shared/links" %>
+		  <div><%= f.label :password %><br />
+		    <%= f.password_field :password, autocomplete: "off", placeholder: "supercalifragilisticexpialidocious", class: "sign-up-login-field" %></div><br/>
+
+		  <div><%= f.label :password_confirmation %><br />
+		    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "supercalifragilisticexpialidocious", class: "sign-up-login-field" %></div><br/>
+
+		  <div class="sign-up-btn pulse"><%= f.submit "", class: "no-style" %></div>
+		<% end %>
+	</div>
+</div>
