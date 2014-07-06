@@ -4,8 +4,8 @@ describe DealsController do
 
 	before(:each) do
       @request.env["devise.mapping"] = Devise.mappings[:business]
-      business = FactoryGirl.create(:business)
-      sign_in business
+      @my_business = FactoryGirl.create(:business)
+      sign_in @my_business
     end
 
 	describe "#index" do 
@@ -54,7 +54,7 @@ describe DealsController do
 
 			it "redirects to category_url when saved" do 
 	      		post :create, deal: my_deal
-	      		expect(response).to redirect_to(business_deals(my_deal[:business_id]))
+	      		expect(response).to redirect_to(business_deals_url(@my_business))
     		end
 		end
 	end
