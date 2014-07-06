@@ -67,10 +67,10 @@ describe DealsController do
 				expect{post :create, deal: my_deal}.to change(Deal, :count).by(1)
 			end
 
-			it "redirects to root_url when saved" do 
-	      post :create, deal: my_deal
-	      expect(response).to redirect_to(category_url(my_deal))
-    end
+			it "redirects to category_url when saved" do 
+	      		post :create, deal: my_deal
+	      		expect(response).to redirect_to(category_url(my_deal[:category_id]))
+    		end
 		end
 	end
 

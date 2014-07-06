@@ -5,6 +5,7 @@ FactoryGirl.define do
 		sequence(:address) { |n| "I am the address number #{n}" }
 		start_time DateTime.now
 		finish_time DateTime.now
+		category_id 1
 	end
 
 	factory :invalid_deal, parent: :deal do 
