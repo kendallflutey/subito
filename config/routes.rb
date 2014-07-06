@@ -3,7 +3,15 @@ Subito::Application.routes.draw do
 
   devise_for :businesses
 
-  root to: "home#index"
+  root to: "categories#index"
+
+  resources :categories, only:[:index, :show]
+
+
+
+
+
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

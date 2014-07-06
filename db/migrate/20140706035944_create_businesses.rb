@@ -3,7 +3,6 @@ class CreateBusinesses < ActiveRecord::Migration
     create_table :businesses do |t|
     	t.string :name
       t.string :address
-      t.string :email
       t.string :phone
       t.timestamps
     end

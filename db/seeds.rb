@@ -7,8 +7,6 @@ Category.create(name: "Services")
 # ### BUSINESSES
 Business.create(name: "Ekim Burger",
 				address: "257 Cuba St, Te Aro, Wellington 6011",
-				longitude: 174.774128,
-				latitude: -41.296125,
 				phone: "04 533 6767",
 				email: "ekim@burger.com",
 				password: "ekim123")
@@ -16,32 +14,24 @@ Business.create(name: "Ekim Burger",
 
 Business.create(name: "Fidels",
 				address: "234 Cuba St, Te Aro 6011",
-				longitude: 174.773949,
-				latitude: -41.295907,
 				phone: "04 533 6868",
 				email: "fidels@cafe.com",
 				password: "fidels123")
 
 Business.create(name: "Olive Cafe",
 				address: "170/172 Cuba St, Wellington 6011",
-				longitude: 174.774908,
-				latitude: -41.294414,
 				phone: "04 533 6969",
 				email: "olive@cafe.com",
 				password: "olive123")
 
 Business.create(name: "Light House Cinema",
 				address: "29 Wigan St, Te Aro, Wellington 6011",
-				longitude: 174.775279,
-				latitude: -41.296139,
 				phone: "04 533 7070",
 				email: "lighthouse@cinemas.com",
 				password: "lighthousecinemas123")
 
 Business.create(name: "Spacesuit",
 				address: "164 Cuba St, Te Aro, Wellington 6011",
-				longitude: 174.775026,
-				latitude: -41.294269,
 				phone: "04 533 7171",
 				email: "space@suit.com",
 				password: "spacesuit123")

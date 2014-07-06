@@ -1,0 +1,64 @@
+body, html{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 1em;
+	color: black;
+	text-align: center;
+	width: 320px;
+}
+
+.categories-container {
+	height: 480px;
+	width: 100%
+}
+
+.menu {
+	height: 80px;
+}
+
+.categories-menu {
+	padding: 0;
+	margin-top: 0;
+
+}
+
+.categories-menu li {
+	list-style: none;
+	padding: none;
+}
+
+.categories-menu li a {
+ 	text-decoration: none;
+ 	display: block;
+  	height: 80px;
+ }
+
+
+ /********CATEGORIES********/
+
+#all {
+	background-color: #23A2B0;
+}
+
+#food_and_drink {
+	background-color: #FF666F;
+}
+
+#entertainment {
+	background-color: #2E5272;
+}
+
+#retail {
+	background-color: #7954BA;
+}
+
+#services {
+	background-color: #0E8054;
+}
+
+#business {
+	background-color: #FF6400;
+}

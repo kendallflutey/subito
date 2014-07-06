@@ -1,0 +1,13 @@
+<div class="categories-container">
+	<ul class="categories-menu">
+		<div class="menu" id="all"><li> <a href="#">All </a></li></div>
+
+		<% @categories.each do |category| %>
+			<div class="menu" id= <%=category.name.downcase.tr(' ', '_')%>>
+				<li><%= link_to category.name, category_path(category) %> </li>
+			</div>
+		<% end %>
+
+		<div class="menu" id="business"><li><a href="#"> Business? </a></li></div>
+	</ul>
+</div>
