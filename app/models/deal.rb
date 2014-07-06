@@ -6,7 +6,7 @@ class Deal < ActiveRecord::Base
   belongs_to :category
   belongs_to :business
 
-  validates :title, :description, presence: {message: "This field is required"}
+  validates :title, :description, :address, :start_time, :finish_time, presence: true
 
   after_validation :geocode, if: :address_changed?
 end

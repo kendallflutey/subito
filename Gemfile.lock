@@ -131,6 +131,8 @@ GEM
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
+    shoulda-callback-matchers (1.1.0)
+      activesupport (>= 3)
     shoulda-matchers (2.6.1)
       activesupport (>= 3.0.0)
     sprockets (2.2.2)
@@ -171,5 +173,6 @@ DEPENDENCIES
   rspec-rails (~> 2.0)
   sass-rails (~> 3.2.3)
   selenium-webdriver
+  shoulda-callback-matchers (~> 1.0)
   shoulda-matchers
   uglifier (>= 1.0.3)
