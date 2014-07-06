@@ -13,12 +13,16 @@ Subito is a web app that uses locational data to display business deals with a l
 
 ##How To Use The Code
 
-TODO
+- Git clone https://github.com/kendallflutey/subito.git
+- bundle install
+- set up DB and seed at least the Categories
+- rails s
+- Enjoy!
 
 
 ##Find Us On Heroku!
 
-TODO
+###[Subito on Heroku](http://fierce-sierra-7195.herokuapp.com/)
 
 
 ##  Project Workflow
