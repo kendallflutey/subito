@@ -33,23 +33,23 @@ TODO
 
 ### Team Roles
 
-#####Leader
+#####Team-Lead & Rails Honcho
 Kendall
 
-#####Quality Control - QC
+#####Quality Control & API Commander
 Yosan
 
-#####Wellbeing Warrior
+#####Wellbeing Warrior & Responsiveness Ruler
 Melissa
 
-#####Testing Lead
+#####Testing Lead & Javascript Superintendent
 Tim
 
 ### Team Dynamics
 - Pairing
 - Standups
 - Half day sprints
-- Feed the beast
+- Feed the beast (!important)
 - Availability schedule
 
 ### Project Management Tools
@@ -64,7 +64,7 @@ Tim
 - Json
 - Ajax
 - Progressive Enhancement
-- Testing
+- Testing (retro, jasmine)
 - Full Rails App
 - API Consumption
 - UI
@@ -76,5 +76,7 @@ Tim
 - Rails Backend
 - Moment.js
 - Geocoder
+- Devise
+- Progressive Enhancement
 
 
