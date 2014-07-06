@@ -15,7 +15,7 @@ class Business < ActiveRecord::Base
   validates :email, uniqueness: {message: "The email is already registered, please login if it's yours"}
   validates :email, format: { with: /.+@.+\..{2,}/, message: "This isn't a valid email address"}
 
-  def self.from_omniauth
+  def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_create do |business|
       business.provider = auth.provider
       business.uid = auth.uid
