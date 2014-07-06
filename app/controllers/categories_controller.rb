@@ -10,9 +10,11 @@ class CategoriesController < ApplicationController
 	end
 
   def getdeals
-    @category = Category.find(params[:id])
-    @deals = Deal.where(category_id: @category.id)
+    position = JSON.parse(cookies["lat_lng"])
+    latitude = position["latitude"]
+    longitude = position["longitude"]
+
+    @deals = Deal.near([latitude, longitude], 1000)
     render json: @deals
   end
-
 end

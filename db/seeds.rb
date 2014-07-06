@@ -44,15 +44,17 @@ Deal.create(title:"50% off burgers",
 			business_id: 1,
 			address: "257 Cuba St, Te Aro, Wellington 6011",
 			longitude: 174.774128,
-			latitude: -41.296125)
+			latitude: -41.296125,
+			start_time: DateTime.now,
+			finish_time: DateTime.now)
 
 Deal.create(title:"half price shakes!",
 			description: "slurp em up at the price of half a cup",
 			category_id: 1,
 			business_id: 2,
 			address: "170/172 Cuba St, Wellington 6011",
-			longitude: 174.774908,
-			latitude: -41.294414)
+			start_time: DateTime.now,
+			finish_time: DateTime.now)
 
 Deal.create(title:"20% off counter food",
 			description: "cheap food for cheap people(we dont have counter food",
@@ -60,7 +62,9 @@ Deal.create(title:"20% off counter food",
 			business_id: 3,
 			address: "164 Cuba St, Te Aro, Wellington 6011",
 			longitude: 174.775026,
-			latitude: -41.294269)
+			latitude: -41.294269,
+			start_time: DateTime.now,
+			finish_time: DateTime.now)
 
 
 

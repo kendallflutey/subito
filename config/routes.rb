@@ -5,6 +5,8 @@ Subito::Application.routes.draw do
 
   root to: "categories#index"
 
+  get "/getdeals", to: "categories#getdeals"
+
   resources :categories, only:[:index, :show]
   resources :deals, only:[:index, :create, :new]
 

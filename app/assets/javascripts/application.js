@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require google_maps
+//= require moment
 //= require_tree .
