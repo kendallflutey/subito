@@ -98,8 +98,7 @@ function initialize() {
   };
 
   var process_deals = function(deals) {
-    console.log(deals);
-    console.log("MADE IT");
+
     var deal_list = to_objects(deals);
 
   
