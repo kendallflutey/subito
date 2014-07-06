@@ -15,36 +15,14 @@ class DealsController < ApplicationController
   	end
 
   def create
-    @deal = Deal.new(params[:post])
+    @deal = Deal.new(params[:deal])
 
     if @deal.save
       flash[:notice] = "Deal was successfully created!"
-      redirect_to root
+      redirect_to deals_path
     else
       render :new
     end
   end
-
- #  def edit
- #  end
-
- #  def update
- #    if @deal.update_attributes(params[:post])
- #      redirect_to root
- #    else
- #      render :edit
- #    end
- #  end
-
- #  def destroy
- #    @deal.destroy
- #    redirect_to root
- #  end
-
-	# private
- #  def load_deal
- #    @deal = Deal.find(params[:id])
- #  end
-
 
 end
