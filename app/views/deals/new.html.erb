@@ -1,0 +1,31 @@
+<div class="new-deal-container">
+
+	<div class="sign-up-login-logo"></div>
+
+	<div class="new-deal-form-container">
+
+		<%= form_for @deal do |f| %>
+			<%= f.label :title, "Give your deal a title" %><br />
+			<%= f.text_field :title, autofocus: true, placeholder: "Half Price Sushi", class: "new-deal-field" %><br/></br>
+
+			<%= f.label :description, "Tell us a little more about your deal" %><br />
+			<%= f.text_area :title, placeholder: "Come into to get super cheap Sushi. Includes everything in the counter.", class: "new-deal-field  address-field"%><br/><br/>
+
+			<%= f.label :address, "Give your deal a title" %><br />
+			<%= f.text_field :address, placeholder: "13 Awesome Street, Wellington, NZ", class: "new-deal-field"%><br/><br/>
+
+			<%= f.label :start_time, "When does your deal go live?" %><br />
+			<%= f.datetime_select :start_time, class: "new-deal-field" %><br/><br/>
+
+			<%= f.label :finish_time, "When does your deal end?" %><br />
+			<%= f.datetime_select :finish_time, class: "new-deal-field"%><br/><br/>
+
+			<%= f.label :deal_image, "Upload a deal image" %><br />
+			<%= f.file_field :deal_image, class: "new-deal-field" %><br/><br/>
+
+			<div class="launch-deal-btn"><%= f.submit "", class: "no-style" %></div>
+		</div>
+
+		<%end%>
+	</div>
+</div>
