@@ -6,7 +6,7 @@ Subito::Application.routes.draw do
   root to: "categories#index"
 
   resources :categories, only:[:index, :show]
-  resources :deals
+  resources :deals, :businesses
 
   
   # The priority is based upon order of creation:
