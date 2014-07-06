@@ -28,6 +28,7 @@ gem 'geocoder'
 
 group :test do
 	gem 'rspec-rails', '~> 2.0'
+	gem "shoulda-callback-matchers", "~> 1.0"
 	gem "shoulda-matchers"
 	gem "factory_girl_rails"
 	gem "faker"

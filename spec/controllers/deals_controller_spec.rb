@@ -26,7 +26,7 @@ describe DealsController do
 
 	describe "#show" do 
 
-		let(:deal) {Deal.create(title: "my deal", description: "my deal description")}
+		let(:deal) {FactoryGirl.create(:deal)}
 
 		before(:each) do 
 			get :show, id: deal
