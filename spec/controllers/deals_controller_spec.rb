@@ -2,6 +2,12 @@ require 'spec_helper'
 
 describe DealsController do 
 
+	before(:each) do
+      @request.env["devise.mapping"] = Devise.mappings[:business]
+      business = FactoryGirl.create(:business)
+      sign_in business
+    end
+
 	describe "#index" do 
 
 		before(:each) do
