@@ -1,12 +1,12 @@
 <div class="biz-deals">
 	<div class="sign-up-login-logo"></div>
 
-	<h1><%=current_business.name %>'s Deals </h1>
+	<h1 class="biz-name-deals"><%=current_business.name %>'s Deals </h1>
 
 	<div class="deals-container">
 		<ul>
 			<% @deals.each do |deal| %>
-				<li><div class="listed-deal">
+				<li><div class="listed-deal outline-inward">
 					<h3><%= deal.title %></h3>
 					<p><%= deal.description %></p>
 					<p>Running until: <%= deal.finish_time %> </p>
