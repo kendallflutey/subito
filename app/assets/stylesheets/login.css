@@ -1,0 +1,30 @@
+.login-form {
+	color: #FFF;
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 10%;
+	font-size: 20px;
+	text-align: left;
+	margin-left: 35%;
+}
+
+.remember-me {
+	font-size: 12px;
+}
+
+.login-btn {
+	text-align: center;
+	background-image: url("login.png");
+	margin-left: 14%;
+	height: 50px;
+	width: 100px;
+}
+
+.password-prompt {
+	text-decoration: none;
+	color: #FFF;
+	font-size: 12px;
+}
+
+.password-prompt:hover {
+	color: #ED7763;
+}
