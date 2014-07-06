@@ -8,7 +8,7 @@ Subito::Application.routes.draw do
   resources :categories, only:[:index, :show]
   resources :deals, only:[:create, :new]
 
-  resources :businesses do
+  resources :businesses, only:[] do
     resources :deals, only:[:index]
   end
 

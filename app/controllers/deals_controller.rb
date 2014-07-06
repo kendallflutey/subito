@@ -1,6 +1,7 @@
 class DealsController < ApplicationController
 
 	before_filter :load_deal, :only => [:show, :edit, :update, :destroy]
+  before_filter :authenticate_business!
 
 	def index
 		@deals = Deal.all
