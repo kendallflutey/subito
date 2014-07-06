@@ -7,7 +7,10 @@ Subito::Application.routes.draw do
 
   resources :categories, only:[:index, :show]
   resources :deals, only:[:index, :create, :new]
-  resources :businesses
+
+  resources :businesses, only:[] do
+    resources :deals, only:[:index]
+  end
 
   
   # The priority is based upon order of creation:

@@ -69,7 +69,7 @@ describe DealsController do
 
 			it "redirects to category_url when saved" do 
 	      		post :create, deal: my_deal
-	      		expect(response).to redirect_to(category_url(my_deal[:category_id]))
+	      		expect(response).to redirect_to(business_deals(my_deal[:business_id]))
     		end
 		end
 	end

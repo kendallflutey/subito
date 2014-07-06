@@ -1,5 +1,19 @@
-<h1>hello world!</h1>
+<div class="biz-deals">
+	<div class="sign-up-login-logo"></div>
 
-<% @deals.each do |deal| %>
-	<li><%= deal.title %></li>
-<%end%>
+	<h1 class="biz-name-deals"><%=current_business.name %>'s Deals </h1>
+
+	<div class="deals-container">
+		<ul>
+			<% @deals.each do |deal| %>
+				<li><div class="listed-deal outline-inward">
+					<h3><%= deal.title %></h3>
+					<p><%= deal.description %></p>
+					<p>Running until: <%= deal.finish_time %> </p>
+				</div></li>
+			<%end%>
+		</ul>
+	</div>
+
+	<%= link_to "", new_deal_path, { class: "link-to-new-deals" } %>
+</div>
