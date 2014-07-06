@@ -36,6 +36,12 @@
 	padding: 15px 100px;
 }
 
+.link-to-home {
+  height: 60px;
+  width: 180px;
+  display: block;
+}
+
 .outline-inward {
   display: inline-block;
   position: relative;
