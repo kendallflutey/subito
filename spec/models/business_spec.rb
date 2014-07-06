@@ -9,4 +9,14 @@ describe Business do
 
 	it { should validate_uniqueness_of :email }
 
+	it { should_not allow_value("kendallflutey.com").for(:email) }
+
+	context "email validation" do 
+
+		it "recognises when email is valid" do 
+			business = FactoryGirl.create(:business)
+			expect(business).to be_valid
+		end
+	end
+
 end

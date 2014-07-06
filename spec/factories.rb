@@ -15,5 +15,7 @@ FactoryGirl.define do
 		sequence(:name) { |n| "I am name number #{n}" }
 		sequence(:address) { |n| "I am address number #{n}" }
 		email "kendall@flutey.com"
+		password "password"
 	end
+
 end
