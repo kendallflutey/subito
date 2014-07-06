@@ -6,6 +6,7 @@ FactoryGirl.define do
 		start_time DateTime.now
 		finish_time DateTime.now
 		category_id 1
+		business_id 1
 	end
 
 	factory :invalid_deal, parent: :deal do 
