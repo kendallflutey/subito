@@ -1,4 +1,9 @@
 Subito::Application.routes.draw do
+
+
+  devise_for :businesses
+
+  root to: "home#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
