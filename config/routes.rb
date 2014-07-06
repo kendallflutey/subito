@@ -1,7 +1,7 @@
 Subito::Application.routes.draw do
 
 
-  devise_for :businesses
+  devise_for :businesses, path_names: {sign_in: "login", sign_out: "logout"}
 
   root to: "categories#index"
 
