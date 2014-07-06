@@ -6,7 +6,7 @@ Subito::Application.routes.draw do
   root to: "categories#index"
 
   resources :categories, only:[:index, :show]
-  resources :deals, only:[:new]
+  resources :deals, only:[:index, :create, :new]
   resources :businesses
 
   
