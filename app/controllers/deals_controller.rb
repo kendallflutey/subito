@@ -18,7 +18,7 @@ class DealsController < ApplicationController
 
     if @deal.save
       flash[:notice] = "Deal was successfully created!"
-      redirect_to deals_path
+      redirect_to category_path(@deal.category_id)
     else
       p @deal.errors
       render :new
