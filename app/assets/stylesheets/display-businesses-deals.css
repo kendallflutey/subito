@@ -7,3 +7,25 @@
 	padding-top: 20px;
 	font-family: 'Open Sans', sans-serif;
 }
+
+.deals-container {
+	/*width: auto;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;*/
+    background-color: blue;
+}
+
+.listed-deal {
+	background-color: red;
+}
+
+.deals-container li {
+	display: inline-block;
+}
+
