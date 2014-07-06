@@ -1,0 +1,104 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.sign-up-login-container {
+	height: 100%;
+	width: 100%;
+	background-image: url("bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 20px;
+	font-family: 'Open Sans', sans-serif;
+	padding-top: 20px
+}
+
+.sign-up-login-logo {
+	text-align: left;
+	margin-left: 2%;
+	height: 60px;
+	width: 180px;
+	background-image: url("logo.png")
+}
+
+.sign-up-form-container {
+	margin-top: 3%;
+	color: #FFF;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	text-align: left;
+	margin-left: 35%;
+}
+
+.sign-up-login-field {
+	width: 350px;
+	height: 20px;
+	margin-top: 8px;
+}
+
+.address-field {
+	height: 60px;
+}
+
+.sign-up-btn {
+	text-align: center;
+	background-image: url("sign-up.png");
+	margin-left: 14%;
+	height: 50px;
+	width: 100px;
+}
+
+.no-style {
+	background: none;
+	border: none;
+	height: 100%;
+	width: 100%;
+}
+
+.no-style:hover {
+	cursor: pointer;
+}
+
+@-webkit-keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+.pulse {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.pulse:hover, .pulse:focus, .pulse:active {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}

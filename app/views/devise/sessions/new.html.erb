@@ -1,0 +1,27 @@
+<div class="sign-up-login-container">
+	<div class="sign-up-login-logo"></div>
+
+
+	<div class="login-form">
+		<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+		  <div><%= f.label :email %><br />
+		  <%= f.email_field :email, autofocus: true, class: "sign-up-login-field", placeholder: "awesome@business.com" %></div>
+
+		  <div><%= f.label :password %><br />
+		    <%= f.password_field :password, autocomplete: "off", class: "sign-up-login-field", placeholder: "supercalifragilisticexpialidocious" %></div>
+
+		  <a class="password-prompt" href="/businesses/password/new">Forgot your password?</a>
+
+		  <% if devise_mapping.rememberable? -%>
+		    <div><%= f.check_box :remember_me %> <%= f.label :remember_me, class: "remember-me" %></div>
+		  <% end -%>
+
+		  <div class="login-btn pulse"><%= f.submit "", class: "no-style" %></div>
+		<% end %>
+
+
+
+	</div>
+
+</div>
