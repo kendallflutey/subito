@@ -11,7 +11,7 @@ class Business < ActiveRecord::Base
 
   has_many :deals
 
-  validates :name, :address, :email, presence: {message: "This field is required"}
+  validates :name, :address, :email, presence: true
   validates :email, uniqueness: {message: "The email is already registered, please login if it's yours"}
   validates :email, format: { with: /.+@.+\..{2,}/, message: "This isn't a valid email address"}
 
