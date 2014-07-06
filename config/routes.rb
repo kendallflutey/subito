@@ -1,12 +1,12 @@
 Subito::Application.routes.draw do
 
 
-  devise_for :businesses
+  devise_for :businesses, path_names: {sign_in: "login", sign_out: "logout"}
 
   root to: "categories#index"
 
   resources :categories, only:[:index, :show]
-  resources :deals
+  resources :deals, :businesses
 
   
   # The priority is based upon order of creation:
