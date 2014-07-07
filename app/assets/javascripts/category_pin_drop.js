@@ -1,6 +1,8 @@
+google.maps.event.addDomListener(window, 'load', getGeoLocation);
+
 var userPosition = {
 
-}
+};
 
 function getGeoLocation() {
   navigator.geolocation.getCurrentPosition(function(position){
@@ -9,7 +11,8 @@ function getGeoLocation() {
     initialize();
   }, geoFail);
 
-}
+};
+
 function setUserPosition(position){
   userPosition = position.coords;
 };
@@ -21,7 +24,9 @@ function setGeoCookie(position) {
   console.log(position.coords);
   var userlat = position.coords.latitude;
   var userlong = position.coords.longitude;
-}
+};
+
+
 function geoFail(data){console.log("geofail", data)}
 
 
@@ -44,7 +49,7 @@ function Deal(id, title, description, start_time, finish_time, deal_image, busin
   this.category_id = category_id;
   this.latitude = latitude;
   this.longitude =  longitude;
-}
+};
 
 function createMarker(pos, title, id, deal_image, description, finish_time) {
     var marker = new google.maps.Marker({
@@ -56,19 +61,16 @@ function createMarker(pos, title, id, deal_image, description, finish_time) {
         description: description,
         finish_time: finish_time
     });
+
     google.maps.event.addListener(marker, 'click', function() {
-       // alert("I am marker " + marker.id);
        $('#nav_bottom').hide();
        $('#nav_bottom').empty();
        $('#nav_bottom').append('<div id="popup_deal"><div id="deal_image"></div><h4>'+marker.title+'</h4>'+'I am marker'+marker.id+description+'<br //><br //> finishes in: '+marker.finish_time+'</div>');
        $('#nav_bottom').show("slowly");
-
-        // $('#nav_bottom').slideUp(200, DealDown);
-
-
     });
+
     return marker;
-}
+};
 
 function DealDown(){
   $('#popup_deal').remove();
@@ -113,11 +115,12 @@ function initialize() {
 
       marker = createMarker(myLatlng, deal['title'], deal['id'], deal['deal_image'], deal['description'], finish);
       console.log(marker.finish_time);
-    }
+    };
   };
- $('#nav_bottom').click(function(){
+
+  $('#nav_bottom').click(function(){
   $('#nav_bottom').hide();
-});
+  });
 
 
 
@@ -130,8 +133,6 @@ function initialize() {
 
 
   map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+};
 
 
-}
-
-google.maps.event.addDomListener(window, 'load', getGeoLocation);
