@@ -1,5 +1,3 @@
-
-
 function haveGeolocation() {
 
   navigator.geolocation.getCurrentPosition(function(position){
@@ -31,21 +29,15 @@ function haveGeolocation() {
     }
 
     function processDeals(data) {
-      for (var i = 0; i < data.length; i++) {
+      $.each(data,function(index, deal){
 
-        var markerLatitude = data[i]["latitude"];
-        var markerLongitude = data[i]["longitude"];
-        var markerCoords = new google.maps.LatLng(markerLatitude, markerLongitude);
-
-        var finish = moment(data[i]["finish_time"]).fromNow();
-
-        createMarker(markerCoords, data[i]["title"], data[i]["id"], data[i]["deal_image"], data[i]["description"], finish);
-      }
+        var markerCoords = new google.maps.LatLng(deal.latitude, deal.longitude);
+        var finishTime = moment(deal.finish_time).fromNow();
+        createMarker(markerCoords, deal.title, deal.id, deal.deal_image, deal.description, finishTime);
+      });
     }
   });
 }
-
-
 
 function getCoords() {
 
@@ -75,8 +67,6 @@ function createMarker(markerCoords, title, id, deal_image, description, finish_t
      $('#nav_bottom').append('<div id="popup_deal"><div id="deal_image"></div><h4>'+dealMarker.title+'</h4>'+'<br/>'+dealMarker.description+'<br //><br //> finishes in: '+dealMarker.finish_time+'</div>');
      $('#nav_bottom').show("slowly");
   });
-
-  return dealMarker;
 }
 
 
