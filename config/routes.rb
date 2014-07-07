@@ -7,6 +7,8 @@ Subito::Application.routes.draw do
 
   get "/getdeals", to: "categories#getdeals"
 
+  get "/full-show", to: "categories#full_show"
+
   resources :categories, only:[:index, :show]
   resources :deals, only:[:index, :create, :new]
 
@@ -14,7 +16,7 @@ Subito::Application.routes.draw do
     resources :deals, only:[:index]
   end
 
-  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

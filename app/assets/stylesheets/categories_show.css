@@ -1,12 +1,2 @@
-html, body, #map-canvas {
-	height: 480px;
-	width: 320px;
-	margin: 0px;
-	padding: 0px
-};
 
-#popup {
-	height: 40px;
-	width: 320px;
-	background-color: blue
-}
+

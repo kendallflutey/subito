@@ -89,7 +89,7 @@ function initialize() {
     var deal_list = [];
     $.each(hash, function(index, item){
       var deal = new Deal(item["id"], item["title"], item["description"], item["description"], item["finish_time"], item["deal_image"], item["business_id"], item["category_id"], item["latitude"], item["longitude"], item["finish_time"]);
-      console.log(item["finish_time"])
+      console.log(item["finish_time"]);
       deal_list.push(deal);
     });
     console.log(deal_list);
@@ -101,7 +101,7 @@ function initialize() {
 
     var deal_list = to_objects(deals);
 
-  
+
 
     for (var i = 0; i < deal_list.length; i++) {
       var deal = deal_list[i];
@@ -112,12 +112,12 @@ function initialize() {
        var finish = moment(deal['finish_time']).fromNow();
 
       marker = createMarker(myLatlng, deal['title'], deal['id'], deal['deal_image'], deal['description'], finish);
-      console.log(marker.finish_time)
+      console.log(marker.finish_time);
     }
   };
  $('#nav_bottom').click(function(){
   $('#nav_bottom').hide();
-})
+});
 
 
 

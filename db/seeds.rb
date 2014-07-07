@@ -43,8 +43,6 @@ Deal.create(title:"50% off burgers",
 			category_id: 1,
 			business_id: 1,
 			address: "257 Cuba St, Te Aro, Wellington 6011",
-			longitude: 174.774128,
-			latitude: -41.296125,
 			start_time: DateTime.now,
 			finish_time: DateTime.now)
 
@@ -61,8 +59,30 @@ Deal.create(title:"20% off counter food",
 			category_id: 1,
 			business_id: 3,
 			address: "164 Cuba St, Te Aro, Wellington 6011",
-			longitude: 174.775026,
-			latitude: -41.294269,
+			start_time: DateTime.now,
+			finish_time: DateTime.now)
+
+Deal.create(title:"sushi train",
+			description: "jump on board the sushi train for the ride of your life",
+			category_id: 1,
+			business_id: 1,
+			address: "158 Tory St, Te Aro, Wellington 6011",
+			start_time: DateTime.now,
+			finish_time: DateTime.now)
+
+Deal.create(title:"half price hookers!",
+			description: "slurp em up at the price of half a cup",
+			category_id: 1,
+			business_id: 2,
+			address: "120 Willis St, Wellington",
+			start_time: DateTime.now,
+			finish_time: DateTime.now)
+
+Deal.create(title:"Taco Mania",
+			description: "Get your sombrero on for some cheap mexican kai",
+			category_id: 1,
+			business_id: 3,
+			address: "321 courtenay place, Wellington",
 			start_time: DateTime.now,
 			finish_time: DateTime.now)
 
