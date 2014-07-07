@@ -197,6 +197,7 @@ DEPENDENCIES
   faker
   geocoder
   jquery-rails
+  json
   omniauth-twitter
   pg
   rails (= 3.2.13)

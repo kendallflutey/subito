@@ -22,7 +22,7 @@ Subito is a web app that uses locational data to display business deals with a l
 
 ##Find Us On Heroku!
 
-###[Subito on Heroku](http://fierce-sierra-7195.herokuapp.com/)
+###[Subito on Heroku](http://subito.herokuapp.com/)
 
 
 ##  Project Workflow
