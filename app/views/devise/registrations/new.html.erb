@@ -17,11 +17,13 @@
 		  <div><%= f.label :phone %><br />
 		  <%= f.text_field :phone, placeholder: "03 321 4567", class: "sign-up-login-field" %></div><br/>
 
-		  <div><%= f.label :password %><br />
-		    <%= f.password_field :password, autocomplete: "off", placeholder: "supercalifragilisticexpialidocious", class: "sign-up-login-field" %></div><br/>
+		  <% if f.object.password_required? %>
+			  <div><%= f.label :password %><br />
+			  <%= f.password_field :password, autocomplete: "off", placeholder: "supercalifragilisticexpialidocious", class: "sign-up-login-field" %></div><br/>
 
-		  <div><%= f.label :password_confirmation %><br />
-		    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "supercalifragilisticexpialidocious", class: "sign-up-login-field" %></div><br/>
+			  <div><%= f.label :password_confirmation %><br />
+			  <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "supercalifragilisticexpialidocious", class: "sign-up-login-field" %></div><br/>
+			<% end %>
 
 		  <div class="sign-up-btn pulse"><%= f.submit "", class: "no-style" %></div>
 		<% end %>

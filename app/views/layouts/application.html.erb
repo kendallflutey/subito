@@ -10,15 +10,16 @@
 	<div id="container">
       <div id="business_nav">
         <% if business_signed_in? %>
-          Logged in as <strong><%= current_business.email %></strong>
+          Logged in as  <strong><%= current_business.name %></strong>
           <%= link_to 'Edit profile', edit_business_registration_path, class: "biz-nav-text biz-nav-left" %> 
           <%= link_to "My Deals", business_deals_path(current_business), class: "biz-nav-text  nav-biz-mid"%>
           <%= link_to "Logout", destroy_business_session_path, class: "biz-nav-text", method: :delete %>
 
         
         <% else %>
-          <%= link_to "Sign up", new_business_registration_path, class: "biz-nav-text nav-biz-left" %> 
-          <%= link_to "Login", new_business_session_path, class: "biz-nav-text" %>
+          <%= link_to "Sign up", new_business_registration_path, class: "biz-nav-text" %> 
+          <%= link_to "Login", new_business_session_path, class: "biz-nav-text nav-biz-mid" %>
+          <%= link_to "Sign in with Twitter", business_omniauth_authorize_path(:twitter), class: "biz-nav-text" %>
         <% end %>
       </div>
 
