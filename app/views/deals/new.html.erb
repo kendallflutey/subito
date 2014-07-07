@@ -5,7 +5,7 @@
 
 	<div class="new-deal-form-container">
 
-		<%= form_for @deal do |f| %>
+		<%= form_for @deal, :html => {:multipart => true} do |f| %>
 			<%= f.hidden_field :business_id, value: current_business.id %>
 
 			<%= f.label :title, "Give your deal a title" %><br />
