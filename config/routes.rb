@@ -8,7 +8,6 @@ Subito::Application.routes.draw do
 
   get "/getdeals", to: "categories#getdeals"
 
-  get "/full-show", to: "categories#full_show"
   post "categories/user_coords" => "categories#user_coords", :as => :user_coords
 
   resources :categories, only:[:index, :show]

@@ -1,0 +1,90 @@
+#deal_image {
+	float: left;
+	height: 100%;
+	content: url(../img/ekim.png);
+	margin-right: 0.313em;
+	border: 1px red solid;
+}
+
+#deal_title {
+	font-size: 1em;
+	font-weight: 700;
+}
+
+#deal_business {
+	font-size: 1em;
+}
+
+#deal_address {
+	font-size: 0.8em;
+}
+
+#deal_description {
+	font-size: 0.8em;
+}
+
+#deal_counter {
+	font-size: 0.8em;
+	color: red;
+}
+
+@media screen and (min-width: 48em){	
+	.pure-g {
+		background-color: orange;
+	}
+
+	#navbar {
+		width: 50%;
+		position: absolute;
+		top: 0em;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: 2;
+	}
+
+	#nav_bottom {
+		position: absolute;
+		bottom: 0em;
+		width: 50%;
+	}
+}
+
+/* LARGE/DESKTOP ≥ 1024px	.pure-u-lg-**/
+@media screen and (min-width: 64em){	
+	.pure-g {
+		background-color: yellow;
+	}
+
+	#navbar {
+		width: 50%;
+		position: absolute;
+		top: 0em;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: 2;
+	}
+
+	#nav_bottom {
+		position: absolute;
+		bottom: 0em;
+		width: 50%;
+	}
+
+}
+
+/* X-LARGE/CINEMA  ≥ 1280px	.pure-u-xl-**/
+@media screen and (min-width: 80em){
+	.pure-g {
+		background-color: green;
+	}
+
+	#navbar {
+		top: 0em;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: 2;
+	}
+
+	#nav_bottom {
+		position: absolute;
+		bottom: 0em;
+		width: 50%;
+	}
+}
