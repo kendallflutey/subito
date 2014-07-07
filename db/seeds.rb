@@ -70,7 +70,7 @@ Deal.create(title:"sushi train",
 			start_time: DateTime.now,
 			finish_time: DateTime.now)
 
-Deal.create(title:"half price hookers!",
+Deal.create(title:"half price coca cola!",
 			description: "slurp em up at the price of half a cup",
 			category_id: 1,
 			business_id: 2,
