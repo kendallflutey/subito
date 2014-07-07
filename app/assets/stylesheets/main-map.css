@@ -1,4 +1,4 @@
-body {
+/*body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 0.8em;
   color: white;
@@ -19,7 +19,7 @@ html, body, #map-canvas {
 
 /*****navbar*****/
 
-.app_body {
+./*app_body {
   position: absolute;
 }
 
@@ -49,13 +49,13 @@ ul#navbar li {
 }
 
 /*****BODY*****/
-
+/*
 #map_canvas {
   position: relative;
   z-index: -1;
 }
-
-#popup_deal {
+*/
+/*#popup_deal {
   display: inline-block;
   text-align: left;
     height: 80px;
@@ -82,3 +82,4 @@ ul#navbar li {
   font-size: 20px;
   margin: 0;
 }
+*/*/*/
