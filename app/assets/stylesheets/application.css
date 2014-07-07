@@ -27,6 +27,10 @@
 	color: #FFF;
 }
 
+.biz-nav-text:hover {
+	color: #ED7763;
+}
+
 .nav-biz-mid {
 	margin-right: 15px;
 	margin-left: 15px;
