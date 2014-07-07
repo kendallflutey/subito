@@ -1,3 +1,7 @@
+/***********************************
+BODY
+************************************/
+
 .map-canvas-container h2{
   color: white;
 }
@@ -21,8 +25,9 @@
   height:100%;
 }
 
-/**************Right Side************/
-
+/***********************************
+DEALS PANNEL (RIGHT SIDE)
+************************************/
 
 .categories-full-right-pane{
   height: 100%;
@@ -90,16 +95,23 @@
   color: white;
 
 }
-/*************Left Side ***************/
-.map-canvas-container{
+
+
+/***********************************
+MAP (LEFT SIDE)
+************************************/
+
+.map-canvas-container {
   height: 100%;
   position: absolute;
   left: 0;
   right: 50%;
   top: 0;
 }
-/************* Nav Bar************************/
-.map-view-navbar{
+
+/************* NAV BAR ************************/
+
+.map-view-navbar {
   height: 70ipx;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -111,13 +123,13 @@
 }
 
 
-.map-view-navbar li{
+.map-view-navbar li {
   margin-right: 7%;
   list-style: none;
   display: inline-block;
 }
 
-#radius{
+#radius {
   margin-top: 10px;
 }
 
@@ -127,12 +139,12 @@
 
 /**********************************************/
 
-#map-canvas{
+#map-canvas {
   height: 100%;
   width: 100%;
 }
 
-#popup_deal{
+#popup_deal {
   display: inline-block;
   text-align: left;
   height: 170px;
@@ -154,7 +166,7 @@
 
 }
 
-#nav_bottom{
+#nav_bottom {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -164,12 +176,15 @@
     .categories-full-right-pane{
       display: none;
     }
+
     .map-canvas-container{
       width: 100%;
     }
+
     #nav_bottom{
       width: 100%
     }
+
     .map-view-navbar{
       width: 100%;
       height: 50px;
@@ -180,15 +195,17 @@
     }
   }
 
+   @media (max-width: 980px){
+    .deal-display-element{
+      width: 95%;
+    }
+  }
+
   @media (max-width: 1600px){
     .deal-display-element{
       width: 46%;
     }
   }
 
-   @media (max-width: 980px){
-    .deal-display-element{
-      width: 95%;
-    }
-  }
+  
 
