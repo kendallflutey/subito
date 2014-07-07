@@ -17,8 +17,8 @@
 
         
         <% else %>
-          <%= link_to "Sign up", new_business_registration_path, class: "biz-nav-text nav-biz-left" %> 
-          <%= link_to "Login", new_business_session_path, class: "biz-nav-text" %>
+          <%= link_to "Sign up", new_business_registration_path, class: "biz-nav-text" %> 
+          <%= link_to "Login", new_business_session_path, class: "biz-nav-text nav-biz-mid" %>
           <%= link_to "Sign in with Twitter", business_omniauth_authorize_path(:twitter), class: "biz-nav-text" %>
         <% end %>
       </div>
