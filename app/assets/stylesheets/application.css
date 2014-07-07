@@ -14,14 +14,12 @@
  */
 
 #business_nav {
-	position: absolute;
-  top: 0;
-  right: 0;
+	float: right;
+ 	margin-right: 2%;
+ 	margin-top: 10px;
 	color: #FFF;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: lighter;
-	z-index: 1;
-	display: none
 }
 
 .biz-nav-text {
