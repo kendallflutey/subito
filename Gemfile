@@ -20,6 +20,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'json'
 
 gem 'devise'
 gem 'omniauth-twitter'
