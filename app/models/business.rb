@@ -11,7 +11,7 @@ class Business < ActiveRecord::Base
 
   has_many :deals
 
-  validates :name, :email, presence: true
+  validates :name, presence: true
   validates :email, uniqueness: {message: "The email is already registered, please login if it's yours"}
   validates :email, format: { with: /.+@.+\..{2,}/, message: "This isn't a valid email address"}
 
@@ -21,6 +21,17 @@ class Business < ActiveRecord::Base
       business.uid = auth.uid
       business.name = auth.info.name
       business.address = auth.info.location
+    end
+  end
+
+  def self.new_with_session(params, session)
+    if session["devise.business_attributes"]
+      new(session["devise.business_attributes"], without_protection: true) do |business|
+        business.attributes = params
+        business.valid?
+      end
+    else
+      super
     end
   end
 
