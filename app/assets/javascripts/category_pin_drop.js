@@ -81,9 +81,3 @@ $(document).ready(function() {
   getCoords();
  
 });
-
-
-
-
-
-
