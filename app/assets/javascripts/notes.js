@@ -44,11 +44,11 @@ var Map = (function() {
 })();
 
 var Server = (function() {
-  var getData = function(callback) {
+  var getData = function(id, callback) {
     $.ajax({
       url:'/getdeals',
       type: 'GET',
-      data: {id: 1},
+      data: { id: id },
       success: callback
     });
   };
@@ -59,8 +59,14 @@ var Server = (function() {
 })();
 
 var App = (function() {
+  var categoryId;
+
+  var setCategoryId = function(id) {
+    categoryId = id;
+  };
+
   var generateMap = function() {
-    Server.getData(Map.buildMap);
+    Server.getData(categoryId, Map.buildMap);
   };
 
   var start = function() {
