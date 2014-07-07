@@ -6,6 +6,7 @@ class CategoriesController < ApplicationController
 	end
 
 	def show
+    @categories = Category.all
 		@category = Category.find(params[:id])
 		@deals = Deal.where(category_id: @category.id)
 	end
@@ -22,13 +23,5 @@ class CategoriesController < ApplicationController
     deals = Deal.near([latitude, longitude], 1000)
     render json: deals
   end
-
-  def full_show
-    @categories = Category.all
-    @category = Category.find(1)
-    @deals = Deal.where(category_id: @category.id)
-  end
-
-
 
 end
