@@ -24,6 +24,7 @@ class CategoriesController < ApplicationController
   end
 
   def full_show
+    @categories = Category.all
     @category = Category.find(1)
     @deals = Deal.where(category_id: @category.id)
   end
