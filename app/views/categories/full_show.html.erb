@@ -16,8 +16,9 @@
       </div>
       <div class="deal-display-container">
         <% @deals.each do |deal| %>
-        <div class="deal-display-element">
+        <div class="deal-display-element" style="<%= deal_background_image(deal) %>" >
           <h2><%= deal.title %></h2>
+          <!-- <%= image_tag deal.deal_image_url.to_s %> -->
           <h4><%= deal.description %></h4>
           <h4><%= deal.finish_time %></h4>
         </div>

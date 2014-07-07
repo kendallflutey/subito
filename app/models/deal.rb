@@ -3,6 +3,7 @@ class Deal < ActiveRecord::Base
 
   geocoded_by :address
 
+  mount_uploader :deal_image, ImageUploader
   belongs_to :category
   belongs_to :business
 
