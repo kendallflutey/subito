@@ -56,6 +56,16 @@ describe DealsController do
 	      		post :create, deal: my_deal
 	      		expect(response).to redirect_to(business_deals_url(@my_business))
     		end
+
+    		it "displays a flash notice when saved" do 
+    			post :create, deal: my_deal
+    			flash[:notice].should_not be_nil
+    		end
+
+    		it "displays a customised flash notice" do 
+    			post :create, deal: my_deal
+    			flash[:notice].should include("Your deal was created and will start at:")
+    		end
 		end
 	end
 

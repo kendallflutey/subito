@@ -50,6 +50,5 @@ class Business < ActiveRecord::Base
       super
     end
   end
-
-
+  
 end

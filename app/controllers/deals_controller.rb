@@ -17,7 +17,6 @@ class DealsController < ApplicationController
       flash[:notice] = "Your deal was created and will start at: #{@deal.start_time}"
       redirect_to business_deals_path(current_business)
     else
-      p @deal.errors
       render :new
     end
   end
