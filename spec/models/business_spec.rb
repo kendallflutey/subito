@@ -20,14 +20,14 @@ describe Business do
 
 	context "omniauth login" do 
 
-		context ".from_omniauth" do 
+		let(:business) { FactoryGirl.create(:business) }
 
-			let(:business) { FactoryGirl.create(:business) }
+		it "requires a password for non-omniauth businesses" do 
+			expect(business.password_required?).to eq(true)
+		end
 
-			it "requires a password for non-omniauth businesses" do 
-				expect(business.password_required).to == true
-			end
-
+		it "requires an email for non-omniauth businesses" do 
+			expect(business.email_required?).to eq(true)
 		end
 
 	end
