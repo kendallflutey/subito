@@ -13,7 +13,7 @@ class Business < ActiveRecord::Base
 
   validates :name, presence: true
   validates :email, uniqueness: {message: "The email is already registered, please login if it's yours"}
-  validates :email, format: { with: /.+@.+\..{2,}/}
+  validates :email, format: { with: /.+@.+\..{2,}/}, :if => 'provider.blank?'
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_create do |business|
@@ -36,6 +36,10 @@ class Business < ActiveRecord::Base
   end
 
   def password_required?
+    super && provider.blank?
+  end
+
+  def email_required?
     super && provider.blank?
   end
 
