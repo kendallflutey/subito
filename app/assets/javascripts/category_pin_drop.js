@@ -70,6 +70,7 @@ function createMarker(markerCoords, title, id, deal_image, description, finish_t
 }
 
 
+<<<<<<< HEAD
 
 
 
@@ -77,3 +78,8 @@ function createMarker(markerCoords, title, id, deal_image, description, finish_t
 
 
 
+=======
+  getCoords();
+ 
+});
+>>>>>>> 95c9b48c4ff7972b024a89047d1e5ea12d5c0914
