@@ -32,6 +32,10 @@ $('.container').click(function(){
 });
 
 
+var args = {
+  id: 3,
+  title: "asdfsd",
+}
 
 function Deal(id, title, description, start_time, finish_time, deal_image, business_id, category_id, latitude, longitude){
   this.id = id;
