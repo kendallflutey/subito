@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require google_maps
 //= require moment
+//= require customselect
 //= require_tree .

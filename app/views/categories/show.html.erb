@@ -8,13 +8,14 @@
 
   <div class="categories-full-right-pane">
     
-    <div class="categories-right-pane-cat-list">
-      <ul class="categories-list">
-            <li>All Categories</li>
+    <div id="category-menu">
+          <select id="page-select" class="styled">
+          <option value="/categories">All</option>
           <% @categories.each do |category| %>
-            <li class="cat-block"><%= category.name %></li>
+           <option <% if category== @category%>selected = "selected" <% end %>value="<%= category_path(category) %>"><%= category.name %></option>
           <% end %>
-      </ul>
+          </select>
+
     </div>
 
     <div class="categories-right-pane-header">
@@ -38,6 +39,7 @@
 
       <ul class="map-view-navbar">
         <li><h2><%= @category.name %></h2></li>
+       
         <li><img src="/assets/radius.png" id="radius"></li>
       </ul>
       

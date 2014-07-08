@@ -10,7 +10,6 @@ gem 'pg'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -18,6 +17,14 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
+
+gem 'bootstrap-select-rails'
+gem 'bootstrap-sass', '~> 3.1.1.1'
+
+gem 'sprockets-rails', '=2.0.0.backport1'
+gem 'sprockets', '=2.2.2.backport2'
+gem 'sass-rails', github: 'guilleiguaran/sass-rails', branch: 'backport'
+
 
 gem 'jquery-rails'
 gem 'json'
@@ -43,7 +50,7 @@ end
 
 gem 'rails_12factor', group: :production
 
-ruby '2.0.0'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
