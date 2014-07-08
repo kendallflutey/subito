@@ -15,4 +15,5 @@
 //= require google_maps
 //= require moment
 //= require modernizr
+//= require countdown
 //= require_tree .
