@@ -10,12 +10,10 @@ var Countdown = (function(){
 
   function setEndDate(dealEndTime){
     expiryTime = new Date(dealEndTime);
+    expiryTime.setHours( expiryTime.getHours());
+    expiryTime.setMinutes( expiryTime.getMinutes());
+    expiryTime.setSeconds( expiryTime.getSeconds());
   };
-
-  // Set up expiry time
-  expiryTime.setHours( expiryTime.getHours() + 2);
-  expiryTime.setMinutes( expiryTime.getMinutes());
-  expiryTime.setSeconds( expiryTime.getSeconds());
 
   var diffInMs = expiryTime - startTime,
       diffInSecs = Math.round( diffInMs / 1000 ),
