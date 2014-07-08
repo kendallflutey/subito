@@ -42,14 +42,11 @@ function haveGeolocation() {
 }
 
 function getCoords() {
-
-  if (Modernizr.geolocation) {
-
-    haveGeolocation();
-  } else {
-    alert("Sorry, but your browser doesn't play nice with Subito...");
-  }
-
+  Modernizr.load({
+    test: Modernizr.geolocation,
+    yep : haveGeolocation(),
+    nope: 'geo.js'
+  });
 }
 
 var countdown = new Countdown();

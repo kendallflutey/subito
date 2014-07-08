@@ -19,5 +19,6 @@
 
 //= require modernizr
 //= require countdown
+//= require geo
 
 //= require_tree .
