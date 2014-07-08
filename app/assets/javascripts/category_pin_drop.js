@@ -9,7 +9,7 @@ function haveGeolocation() {
     $.ajax({
         url: '/categories/user_coords',
         type: 'POST',
-        data: { latitude: latitude, longitude: longitude },
+        data: { latitude: latitude, longitude: longitude, id: categoryId },
         success: function(data){
           displayMap();
           processDeals(data);
@@ -32,7 +32,9 @@ function haveGeolocation() {
       $.each(data,function(index, deal){
 
         var markerCoords = new google.maps.LatLng(deal.latitude, deal.longitude);
-        var finishTime = moment(deal.finish_time).fromNow();
+
+        //"July 8, 2014 23:15:00"
+        var finishTime = moment(deal.finish_time).format("MMMM D, YYYY hh:mm:ss" );
         createMarker(markerCoords, deal.title, deal.id, deal.deal_image, deal.description, finishTime);
       });
     }
@@ -41,12 +43,15 @@ function haveGeolocation() {
 
 function getCoords() {
 
-  if (navigator.geolocation) {
+  if (Modernizr.geolocation) {
+
     haveGeolocation();
   } else {
     alert("Sorry, but your browser doesn't play nice with Subito...");
   }
+
 }
+
 
 function createMarker(markerCoords, title, id, deal_image, description, finish_time) {
 
@@ -60,10 +65,19 @@ function createMarker(markerCoords, title, id, deal_image, description, finish_t
     finish_time: finish_time
   });
 
+
   google.maps.event.addListener(dealMarker, 'click', function() {
      $('#nav_bottom').hide();
      $('#nav_bottom').empty();
-     $('#nav_bottom').append('<div id="popup_deal"><div id="deal_image"></div><h4>'+dealMarker.title+'!</h4>'+'<p id="popup-description">'+dealMarker.description+"</p><p id='pop-up-timer'>"+dealMarker.finish_time+'</p></div>');
+     $('#nav_bottom').append('<div id="popup_deal"><div id="deal_image"></div><h4>'+dealMarker.title+'!</h4>'+'<p id="popup-description">'+dealMarker.description+'</p><p id="pop-up-timer"></p></div>');
      $('#nav_bottom').show("slowly");
+
+     var countDownInterval = setInterval(placeTimer, 1000);
+     Countdown.setup(dealMarker.finish_time, countDownInterval);
   });
+
+  function placeTimer() {
+    var timeLeft = Countdown.timeFormat();
+    $('#pop-up-timer').html(timeLeft);
+  }
 }
