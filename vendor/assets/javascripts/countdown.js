@@ -7,12 +7,11 @@ var Countdown = (function(){
       hourElem = "";
       minuteElem = "";
       secondElem = "";
+      countDownInterval = "";
 
-  function setEndDate(dealEndTime){
+  function setup(dealEndTime, counter){
     expiryTime = new Date(dealEndTime);
-    expiryTime.setHours( expiryTime.getHours());
-    expiryTime.setMinutes( expiryTime.getMinutes());
-    expiryTime.setSeconds( expiryTime.getSeconds());
+    countDownInterval = counter;
   };
 
   var diffInMs = expiryTime - startTime,
@@ -60,7 +59,7 @@ var Countdown = (function(){
     var hours = parseInt(hourElem);
         minutes = parseInt(minuteElem),
         seconds = parseInt(secondElem);
-   
+
     // Update the hour if necessary
     if( minutes == 0 && seconds == 0) {
       --hours;
@@ -95,12 +94,7 @@ var Countdown = (function(){
    
       // Clear interval and fire countDownOnComplete()
       clearInterval(countDownInterval);
-      countDownOnComplete();
     }
-  }
-
-  function countDownOnComplete() {
-    console.log('Countdown timer has completed!');
   }
 
   function timeFormat() {
@@ -110,7 +104,7 @@ var Countdown = (function(){
   }
 
   return {
-    setEndDate: setEndDate,
+    setup: setup,
     timeFormat: timeFormat
   }
 })();
