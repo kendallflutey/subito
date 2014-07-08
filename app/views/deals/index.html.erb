@@ -1,19 +1,69 @@
-<div class="business-profile">
+<!-- <div class="business-profile-container">
 
-	<div class="biz-deals">
-		<h1 class="biz-name-deals"><%=current_business.name %>'s Deals </h1>
+	<div class="index-deals-container">
 
-		<div class="deals-container">
-			<ul>
-				<% @deals.each do |deal| %>
-					<li><div class="listed-deal outline-inward">
-						<h3><%= deal.title %></h3>
-						<p><%= deal.description %></p>
-						<p>Running until: <%= deal.finish_time %> </p>
-					</div></li>
-				<%end%>
-			</ul>
+		<div class="business-profile-right-pane">
+
+
+			<div class="biz-deals">
+				<h1 class="biz-name-deals-header"><%=current_business.name %>'s Deals </h1>
+
+				<div class="business-deals-container">
+					
+						<% @deals.each do |deal| %>
+							<div class="listed-deal outline-inward">
+								<h3><%= deal.title %></h3>
+								<p><%= deal.description %></p>
+								<p>Running until: <%= deal.finish_time %> </p>
+							</div>
+						<%end%>
+					
+				</div>
+			</div>
 		</div>
 
-		<%= link_to "", new_deal_path, { class: "link-to-new-deals" } %>
+
+		<div class="profile-new-deals-container">
+
+			<div class="new-deal-form-container">
+
+				<%= form_for @deal, :html => {:multipart => true} do |f| %>
+
+					<%= f.hidden_field :business_id, value: current_business.id %>
+
+					<% @deal.errors.full_messages.each do |msg| %>
+					    <p><%= msg %></p>
+					<% end %>
+
+					<%= f.label :title, "Give your deal a title" %><br />
+					<%= f.text_field :title, autofocus: true, placeholder: "Half Price Sushi", class: "new-deal-field" %><br/></br>
+
+					<%= f.label :description, "Tell us a little more about your deal" %><br />
+					<%= f.text_area :description, placeholder: "Come into to get super cheap Sushi. Includes everything in the counter.", class: "new-deal-field  address-field"%><br/><br/>
+
+					<%= f.label :address, "Where can we find this deal?" %><br />
+					<%= f.text_field :address, placeholder: "13 Awesome Street, Wellington, NZ", class: "new-deal-field"%><br/><br/>
+
+					<%= f.label :category_id, "Which sounds like this deal?" %><br />
+					<%= f.collection_select :category_id, Category.all, :id, :name, class: "new-deal-field"%><br/><br/>
+
+					<%= f.label :start_time, "When does your deal go live?" %><br />
+					<%= f.datetime_select :start_time, class: "new-deal-field" %><br/><br/>
+
+					<%= f.label :finish_time, "When does your deal end?" %><br />
+					<%= f.datetime_select :finish_time, class: "new-deal-field"%><br/><br/>
+
+					<%= f.label :deal_image, "Upload a deal image" %><br />
+					<%= f.file_field :deal_image, class: "new-deal-field" %><br/><br/>
+
+					<div class="launch-deal-btn"><%= f.submit "", class: "no-style" %></div>
+				<%end%>
+			</div>
+
+		</div>
+
+
+
 	</div>
+</div>
+ -->
