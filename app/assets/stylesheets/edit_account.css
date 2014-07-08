@@ -1,4 +1,55 @@
-.edit-account {
+/*************************************
+              BODY
+**************************************/
+
+.body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.edit-account-container {
+  width: 100%;
+  height:100%;
+  /*background-color: #F7F7F7;*/
+  background-color: red;
+}
+
+.full-edit-conatiner{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height:100%;
+  background-color: green;
+  /*background-image: url("bg.jpg");*/
+}
+
+
+/*************************************
+    DEALS LISTINGS (RIGHT SIDE)
+**************************************/
+
+.right-side-account-leave {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  min-width: 50%;
+  /*background-color: yellow;*/
+  background-image: url("bg.jpg");
+}
+
+.cancel-account {
+	margin-top: 30%;
+	margin-left: 20%;
+	color: #414141;
+}
+
+
+
+
+/*.edit-account {
 	float: left;
 	color: #FFF;
 	margin-left: 20%;
@@ -62,4 +113,4 @@
 
 .cancel-btn:hover {
 	cursor: pointer;
-}
+}*/
