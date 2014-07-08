@@ -1,10 +1,4 @@
-#deal_image {
-	float: left;
-	height: 100%;
-	content: url(../img/ekim.png);
-	margin-right: 0.313em;
-	border: 1px red solid;
-}
+
 
 #deal_title {
 	font-size: 1em;
