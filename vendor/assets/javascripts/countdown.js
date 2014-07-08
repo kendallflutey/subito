@@ -25,19 +25,19 @@ var Countdown = (function(){
   // Set up the hours
   if( amountOfHours > 0 ) {
     hourElem = (amountOfHours < 10)
-    ? '0' + amountOfHours + ' : '
-    : amountOfHours + ' : ';
+    ? '0' + amountOfHours + ':'
+    : amountOfHours + ':';
   } else {
-    hourElem = '00 : ';
+    hourElem = '00:';
   }
 
   // Set up the minutes
   if( amountOfMinutes > 0 ) {
     minuteElem = ( amountOfMinutes < 10 )
-    ? '0' + amountOfMinutes + ' : '
-    : amountOfMinutes + ' : ';
+    ? '0' + amountOfMinutes + ':'
+    : amountOfMinutes + ':';
   } else {
-    minuteElem = '00 : ';
+    minuteElem = '00:';
   }
 
   // // Set up the seconds
@@ -51,10 +51,10 @@ var Countdown = (function(){
 
   function countDown() {
     var dateNow = new Date();
-   
+
     // If we're not at the end of the timer, continue the countdown
     if( expiryTime > dateNow ) {
-   
+
     // References to current countdown values
     var hours = parseInt(hourElem);
         minutes = parseInt(minuteElem),
@@ -63,35 +63,35 @@ var Countdown = (function(){
     // Update the hour if necessary
     if( minutes == 0 && seconds == 0) {
       --hours;
-   
-      hourElem = ( hours < 10 ) ? '0' + (hours) + ' : ' : (hours) + ' : ';
-      minuteElem = '59 : ';
+
+      hourElem = ( hours < 10 ) ? '0' + (hours) + ':' : (hours) + ':';
+      minuteElem = '59:';
       secondElem = '59';
       return;
     }
-   
+
     // Update the minute if necessary
     if( seconds == 0 ) {
-   
+
       if( minutes > 0 ) {
         --minutes;
-        minuteElem = ( minutes > 10 ) ? minutes + ' : ' : '0' + minutes + ' : ';
-   
+        minuteElem = ( minutes > 10 ) ? minutes + ':' : '0' + minutes + ':';
+
         } else {
-          minuteElem = '59' + ' : ';
+          minuteElem = '59' + ':';
         }
-   
+
         return secondElem = '59';
-   
+
       } else {
         --seconds;
         secondElem = ( seconds < 10 ) ? '0' + seconds : seconds;
       }
-   
+
     } else {
       // Reset the seconds
       secondElem = '00';
-   
+
       // Clear interval and fire countDownOnComplete()
       clearInterval(countDownInterval);
     }
@@ -100,7 +100,7 @@ var Countdown = (function(){
   function timeFormat() {
     countDown();
 
-    return hourElem + ':' + minuteElem + ':' + secondElem;
+    return hourElem + minuteElem + secondElem;
   }
 
   return {
