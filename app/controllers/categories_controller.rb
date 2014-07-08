@@ -22,7 +22,7 @@ class CategoriesController < ApplicationController
   def getdeals(latitude, longitude)
     deals = Deal.near([latitude, longitude], 1000)
 
-    filtered_deals = deals.select { |deal| deal.category_id ==  1}
+    filtered_deals = deals.select { |deal| deal.category_id == params[:id].to_i}
 
     render json: filtered_deals
   end
