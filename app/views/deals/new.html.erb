@@ -2,8 +2,8 @@
 
 	<div class="new-deal-form-container">
 
+		<%= form_for @deal, :html => {:multipart => true} do |f| %>
 
-		<%= form_for @deal do |f| %>
 			<%= f.hidden_field :business_id, value: current_business.id %>
 
 			<% @deal.errors.full_messages.each do |msg| %>
