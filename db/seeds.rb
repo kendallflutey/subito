@@ -38,13 +38,13 @@ Business.create(name: "Spacesuit",
 
 ### DEALS
 
-Deal.create(title:"50% off burgers",
+Deal.create(title:"FREE UPPERCASE FRIES",
 			description: "burgers cheap for all to eat",
 			category_id: 1,
 			business_id: 1,
 			address: "257 Cuba St, Te Aro, Wellington 6011",
 			start_time: DateTime.now,
-			finish_time: DateTime.new(2014,07,11,20,50,55))
+			finish_time: DateTime.new(2014,07,9,20,50,55))
 
 Deal.create(title:"half price shakes!",
 			description: "slurp em up at the price of half a cup",
@@ -52,7 +52,7 @@ Deal.create(title:"half price shakes!",
 			business_id: 2,
 			address: "170/172 Cuba St, Wellington 6011",
 			start_time: DateTime.now,
-			finish_time: DateTime.now)
+			finish_time: DateTime.new(2014,07,9,8,50,55))
 
 Deal.create(title:"20% off counter food",
 			description: "cheap food for cheap people(we dont have counter food",
@@ -60,7 +60,7 @@ Deal.create(title:"20% off counter food",
 			business_id: 3,
 			address: "164 Cuba St, Te Aro, Wellington 6011",
 			start_time: DateTime.now,
-			finish_time: DateTime.now)
+			finish_time: DateTime.new(2014,07,9,19,50,55))
 
 Deal.create(title:"sushi train",
 			description: "jump on board the sushi train for the ride of your life",
@@ -68,7 +68,7 @@ Deal.create(title:"sushi train",
 			business_id: 1,
 			address: "158 Tory St, Te Aro, Wellington 6011",
 			start_time: DateTime.now,
-			finish_time: DateTime.now)
+			finish_time: DateTime.new(2014,07,9,16,50,55))
 
 Deal.create(title:"half price coca cola!",
 			description: "slurp em up at the price of half a cup",
@@ -76,7 +76,7 @@ Deal.create(title:"half price coca cola!",
 			business_id: 2,
 			address: "120 Willis St, Wellington",
 			start_time: DateTime.now,
-			finish_time: DateTime.now)
+			finish_time: DateTime.new(2014,07,9,15,50,55))
 
 Deal.create(title:"Taco Mania",
 			description: "Get your sombrero on for some cheap mexican kai",
@@ -84,7 +84,7 @@ Deal.create(title:"Taco Mania",
 			business_id: 3,
 			address: "321 courtenay place, Wellington",
 			start_time: DateTime.now,
-			finish_time: DateTime.now)
+			finish_time: DateTime.new(2014,07,9,20,50,55))
 
 
 

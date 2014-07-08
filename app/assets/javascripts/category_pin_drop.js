@@ -34,7 +34,7 @@ function haveGeolocation() {
         var markerCoords = new google.maps.LatLng(deal.latitude, deal.longitude);
 
         //"July 8, 2014 23:15:00"
-        var finishTime = moment(deal.finish_time).format("MMMM D, YYYY hh:mm:ss" );
+        var finishTime = moment(deal.finish_time).toDate();
         createMarker(markerCoords, deal.title, deal.id, deal.deal_image, deal.description, finishTime);
       });
     }
@@ -52,6 +52,7 @@ function getCoords() {
 
 }
 
+var countdown = new Countdown();
 
 function createMarker(markerCoords, title, id, deal_image, description, finish_time) {
 
@@ -72,12 +73,9 @@ function createMarker(markerCoords, title, id, deal_image, description, finish_t
      $('#nav_bottom').append('<div id="popup_deal"><div id="deal_image"></div><h4>'+dealMarker.title+'!</h4>'+'<p id="popup-description">'+dealMarker.description+'</p><p id="pop-up-timer"></p></div>');
      $('#nav_bottom').show("slowly");
 
-     var countDownInterval = setInterval(placeTimer, 1000);
-     Countdown.setup(dealMarker.finish_time, countDownInterval);
+     countdown.stop();
+     countdown.onUpdate = function(formattedTimeLeft) { $('#pop-up-timer').html(formattedTimeLeft); };
+     countdown.onComplete = function() { alert('Deal ended!'); };
+     countdown.start(finish_time);
   });
-
-  function placeTimer() {
-    var timeLeft = Countdown.timeFormat();
-    $('#pop-up-timer').html(timeLeft);
-  }
 }
