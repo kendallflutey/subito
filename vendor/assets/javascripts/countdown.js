@@ -6,6 +6,9 @@ function Countdown() {
 
   var targetDate;
   var interval;
+  var hourElem;
+  var minuteElem;
+  var secondElem;
 
   this.stop = function() {
     clearInterval(interval);
@@ -36,7 +39,35 @@ function Countdown() {
     var minutes = parseInt(secondsLeft / 60);
     var seconds = parseInt(secondsLeft % 60);
 
+     if( hours > 0 ) {
+    hourElem = (hours < 10)
+    ? '0' + hours + ' : '
+    : hours + ' : ';
+  } else {
+    hourElem = '00 : ';
+  }
+
+  // Set up the minutes
+  if( minutes > 0 ) {
+    minuteElem = ( minutes < 10 )
+    ? '0' + minutes + ' : '
+    : minutes + ' : ';
+  } else {
+    minuteElem= '00 : ';
+  }
+
+  // // Set up the seconds
+  if( seconds > 0 ) {
+    secondElem = (seconds < 10)
+    ? '0' + seconds
+    : seconds;
+  } else {
+    secondElem = '00';
+  }
+
+
+
     if (this.onUpdate)
-      this.onUpdate(days + ":" + hours + ":" + minutes + ":" + seconds);
+      this.onUpdate(days + " days, " + hourElem + minuteElem  + secondElem);
   }
 }
