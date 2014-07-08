@@ -4,6 +4,7 @@ class DealsController < ApplicationController
 
 	def index
 		@deals = Deal.where(business_id: current_business.id)
+    create
 	end
 
 	def new
