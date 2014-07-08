@@ -69,5 +69,6 @@ function Countdown() {
 
     if (this.onUpdate)
       this.onUpdate(days + " days, " + hourElem + minuteElem  + secondElem);
+      //this.onUpdate(days + ":" + hourElem + minuteElem  + secondElem);
   }
 }
