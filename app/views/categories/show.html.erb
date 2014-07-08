@@ -1,6 +1,3 @@
-<script type="javascript/text">
-  // App.setCategoryId(<%= @category.id %>);
-</script>
 
 
 <div class="index-container">
@@ -18,8 +15,16 @@
 
     </div>
 
+    <div class="stripe">
+      <div class="line"></div>
+    </div>
+
     <div class="categories-right-pane-header">
         <h1>Deals around you in: <%= @category.name %></h1>
+    </div>
+
+    <div class="stripe">
+      <div class="line line-btm"></div>
     </div>
       
       <div class="deal-display-container">
@@ -38,8 +43,12 @@
     <div class="map-canvas-container">
 
       <ul class="map-view-navbar">
+<<<<<<< HEAD
         <li><h2><%= @category.name %></h2></li>
        
+=======
+      g  <li><h2><%= @category.name %></h2></li>
+>>>>>>> d23f06a7e116fa721612a1be1870d2873bf9d65b
         <li><img src="/assets/radius.png" id="radius"></li>
       </ul>
       
@@ -49,3 +58,11 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+var categoryId = <%= @category.id %>;
+$(document).ready(function() {
+  getCoords();
+ 
+});
+</script>

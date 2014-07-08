@@ -14,5 +14,10 @@
 //= require jquery_ujs
 //= require google_maps
 //= require moment
+<<<<<<< HEAD
 //= require customselect
+=======
+//= require modernizr
+//= require countdown
+>>>>>>> d23f06a7e116fa721612a1be1870d2873bf9d65b
 //= require_tree .
