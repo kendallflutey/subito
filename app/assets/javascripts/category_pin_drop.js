@@ -41,7 +41,7 @@ function haveGeolocation() {
 
 function getCoords() {
 
-  if (navigator.geolocation) {
+  if (Modernizr.geolocation) {
     haveGeolocation();
   } else {
     alert("Sorry, but your browser doesn't play nice with Subito...");
