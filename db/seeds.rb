@@ -44,7 +44,7 @@ Deal.create(title:"50% off burgers",
 			business_id: 1,
 			address: "257 Cuba St, Te Aro, Wellington 6011",
 			start_time: DateTime.now,
-			finish_time: DateTime.now)
+			finish_time: DateTime.new(2014,07,11,20,50,55))
 
 Deal.create(title:"half price shakes!",
 			description: "slurp em up at the price of half a cup",
