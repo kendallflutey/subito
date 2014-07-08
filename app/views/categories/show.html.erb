@@ -3,29 +3,28 @@
 
   <div class="categories-full-right-pane">
 
-    <div id="category-menu">
-      <div id="select-wrapper">
-          <select id="page-select" class="styled">
-          <option value="/categories">All</option>
-          <% @categories.each do |category| %>
-           <option <% if category== @category%>selected = "selected" <% end %>value="<%= category_path(category) %>"><%= category.name %></option>
-          <% end %>
-          </select>
-      </div>
-
-    </div>
-
-      <div class="stripe">
-        <div class="line"></div>
-      </div>
+    <div class="choose-category">
 
       <div class="categories-right-pane-header">
-          <h1>Deals around you in: <%= @category.name %></h1>
+          <h3 class="show-nearby">Shoing nearby deals in: </h3>
+      </div>
+
+      <div id="category-menu">
+        <div id="select-wrapper">
+            <select id="page-select" class="styled">
+            <option value="/categories">All</option>
+            <% @categories.each do |category| %>
+             <option <% if category== @category%>selected = "selected" <% end %>value="<%= category_path(category) %>"><%= category.name %></option>
+            <% end %>
+            </select>
+        </div>
       </div>
 
       <div class="stripe">
         <div class="line line-btm"></div>
       </div>
+
+    </div>
 
         <div class="deal-display-container">
           <% @deals.each do |deal| %>
