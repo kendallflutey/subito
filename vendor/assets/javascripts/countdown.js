@@ -1,4 +1,5 @@
 //From: https://mindgrader.com/tutorials/1-how-to-create-a-simple-javascript-countdown-timer
+//Modified by Subito 2014
 
 function Countdown() {
   this.onUpdate;
@@ -68,7 +69,7 @@ function Countdown() {
 
 
     if (this.onUpdate)
-      this.onUpdate(days + " days, " + hourElem + minuteElem  + secondElem);
-      //this.onUpdate(days + ":" + hourElem + minuteElem  + secondElem);
+      //this.onUpdate(days + " days, " + hourElem + minuteElem  + secondElem);
+      this.onUpdate(hourElem + minuteElem  + secondElem);
   }
 }
