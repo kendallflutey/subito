@@ -11,6 +11,8 @@ gem 'pg'
 # in production environments by default.
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails',   '~> 3.2.3'
+
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -18,12 +20,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'bootstrap-select-rails'
-gem 'bootstrap-sass', '~> 3.1.1.1'
 
-gem 'sprockets-rails', '=2.0.0.backport1'
-gem 'sprockets', '=2.2.2.backport2'
-gem 'sass-rails', github: 'guilleiguaran/sass-rails', branch: 'backport'
 
 
 gem 'jquery-rails'
@@ -36,6 +33,7 @@ gem 'geocoder'
 
 gem 'rmagick'
 gem 'carrierwave'
+
 
 group :test do
 	gem 'rspec-rails', '~> 2.0'
