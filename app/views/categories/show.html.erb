@@ -29,7 +29,9 @@
         <div class="deal-display-container">
           <% @deals.each do |deal| %>
             <div class="deal-display-element">
-              <h2><%= deal.title %></h2>
+              <div class="deal-title-box">
+                <h2><%= deal.title %></h2>
+              </div>
               <h4><%= deal.description %></h4>
               <h4><%= deal.finish_time %></h4>
             </div>
