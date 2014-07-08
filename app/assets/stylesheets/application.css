@@ -24,19 +24,36 @@
 	text-align: right;
 	top: 0;
 	z-index: 2;
-	height: 50px;
+	height: 60px;
 	-webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.10);
 	-moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.10);
 	box-shadow:         0px 5px 5px 0px rgba(50, 50, 50, 0.10);
 }
 
-.biz-nav-text {
-	text-decoration: none;
-	color: #2F2B2D;
+.header-logo {
+	height: 50px;
+	width: 150px;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	margin-left: 20px;
+	margin-top: 5px;
+	background-image: url("header-logo.png")
 }
 
-.biz-nav-text:hover {
-	color: #ED7763;
+.header-info {
+	margin-top: 20px;
+}
+
+.biz-nav-text {
+	text-decoration: none;
+	color: #414141;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.header-hover:hover {
+	color: #67D3B1
 }
 
 .nav-biz-mid {
@@ -50,6 +67,10 @@
 
 .last-in-list {
 	margin-right: 50px;
+}
+
+.logged-in-name {
+	color: #67D3B1;
 }
 
 .error-messages {
