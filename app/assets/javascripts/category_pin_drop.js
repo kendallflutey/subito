@@ -48,7 +48,6 @@ function getCoords() {
   }
 }
 
-
 function createMarker(markerCoords, title, id, deal_image, description, finish_time) {
 
   var dealMarker = new google.maps.Marker({
@@ -61,25 +60,11 @@ function createMarker(markerCoords, title, id, deal_image, description, finish_t
     finish_time: finish_time
   });
 
+
   google.maps.event.addListener(dealMarker, 'click', function() {
      $('#nav_bottom').hide();
      $('#nav_bottom').empty();
-     $('#nav_bottom').append('<div id="popup_deal"><div id="deal_image"></div><h4>'+dealMarker.title+'</h4>'+'<br/>'+dealMarker.description+'<br //><br //> finishes in: '+dealMarker.finish_time+'</div>');
+     $('#nav_bottom').append('<div id="popup_deal"><div id="deal_image"></div><h4>'+dealMarker.title+'</h4><br/>'+dealMarker.description+'<br //><br //> finishes in: '+dealMarker.finish_time+'</div>');
      $('#nav_bottom').show("slowly");
   });
 }
-
-
-<<<<<<< HEAD
-
-
-
-
-
-
-
-=======
-  getCoords();
- 
-});
->>>>>>> 95c9b48c4ff7972b024a89047d1e5ea12d5c0914
