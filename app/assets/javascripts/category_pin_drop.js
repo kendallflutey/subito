@@ -9,11 +9,11 @@ function getCoords() {
       var longitude = position.coords.longitude;
       
       var myLatlng = new google.maps.LatLng(latitude, longitude);
-
+     
       $.ajax({
           url: '/categories/user_coords',
           type: 'POST',
-          data: { latitude: latitude, longitude: longitude },
+          data: { latitude: latitude, longitude: longitude, id: categoryId },
           success: function(data){
             displayMap();
             processDeals(data);
@@ -76,8 +76,3 @@ function createMarker(markerCoords, title, id, deal_image, description, finish_t
 }
 
  
-$(document).ready(function() {
-
-  getCoords();
- 
-});
