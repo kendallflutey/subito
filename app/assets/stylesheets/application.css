@@ -51,3 +51,9 @@
 .last-in-list {
 	margin-right: 50px;
 }
+
+.error-messages {
+	color: red;
+	background-color: blue;
+	margin-top: 50px;
+}

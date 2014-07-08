@@ -30,6 +30,7 @@ gem 'geocoder'
 gem 'rmagick'
 gem 'carrierwave'
 
+
 group :test do
 	gem 'rspec-rails', '~> 2.0'
 	gem "shoulda-callback-matchers", "~> 1.0"

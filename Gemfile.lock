@@ -167,6 +167,9 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
+    time_diff (0.3.0)
+      activesupport
+      i18n
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
@@ -208,5 +211,6 @@ DEPENDENCIES
   selenium-webdriver
   shoulda-callback-matchers (~> 1.0)
   shoulda-matchers
+  time_diff (~> 0.3.0)
   uglifier (>= 1.0.3)
   unicorn
