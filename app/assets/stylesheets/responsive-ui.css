@@ -1,6 +1,6 @@
-/***********************************
-BODY
-************************************/
+/*************************************
+              BODY
+**************************************/
 
 .map-canvas-container h2{
   color: white;
@@ -15,7 +15,6 @@ BODY
 .index-container {
   width: 100%;
   height:100%;
-  background-color: green;
 }
 
 .full-show-container{
@@ -25,11 +24,12 @@ BODY
   height:100%;
 }
 
-/***********************************
-DEALS PANNEL (RIGHT SIDE)
-************************************/
+/*************************************
+    DEALS LISTINGS (RIGHT SIDE)
+**************************************/
 
-.categories-full-right-pane{
+
+.categories-full-right-pane {
   height: 100%;
   position: absolute;
   left: 50%;
@@ -44,7 +44,6 @@ DEALS PANNEL (RIGHT SIDE)
 
 .categories-right-pane-cat-list {
   width: 100%;
-  margin-top: 48.5px;
 }
 
 .categories-list {
@@ -53,9 +52,9 @@ DEALS PANNEL (RIGHT SIDE)
   display: inline;
   margin: 0;
   list-style: none;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: -5px 6px 5px 0px rgba(50, 50, 50, 0.68);
+  -moz-box-shadow:    -5px 6px 5px 0px rgba(50, 50, 50, 0.68);
+  box-shadow:         -5px 6px 5px 0px rgba(50, 50, 50, 0.68);
 }
 
 .categories-list li {
@@ -93,15 +92,19 @@ DEALS PANNEL (RIGHT SIDE)
   margin-left: 2.5%;
   margin-bottom: 1.25vw;
   color: white;
+  -webkit-box-shadow: -4px 5px 4px 0px rgba(50, 50, 50, 0.52);
+  -moz-box-shadow:    -4px 5px 4px 0px rgba(50, 50, 50, 0.52);
+  box-shadow:         -4px 5px 4px 0px rgba(50, 50, 50, 0.52);
 
 }
 
 
-/***********************************
-MAP (LEFT SIDE)
-************************************/
+/*************************************
+    MAP DISPLAY (LEFT SIDE)
+**************************************/
 
-.map-canvas-container {
+
+.map-canvas-container{
   height: 100%;
   position: absolute;
   left: 0;
@@ -109,10 +112,16 @@ MAP (LEFT SIDE)
   top: 0;
 }
 
-/************* NAV BAR ************************/
+#map-canvas{
+  height: 100%;
+  width: 100%;
+}
 
-.map-view-navbar {
-  height: 70ipx;
+
+/************* Nav Bar************************/
+
+.map-view-navbar{
+  height: 80px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   margin: 0;
@@ -120,16 +129,17 @@ MAP (LEFT SIDE)
   position: absolute;
   top: 0px;
   z-index: 2;
+  display: none;
 }
 
 
-.map-view-navbar li {
+.map-view-navbar li{
   margin-right: 7%;
   list-style: none;
   display: inline-block;
 }
 
-#radius {
+#radius{
   margin-top: 10px;
 }
 
@@ -137,23 +147,10 @@ MAP (LEFT SIDE)
   color: white;
 }
 
-/**********************************************/
 
-#map-canvas {
-  height: 100%;
-  width: 100%;
-}
+/*****************POPUP*********************/
 
-#nav_bottom {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 170px;
-  padding: 0;
-  margin: 0;
-  }
-
-#popup_deal {
+#popup_deal{
   display: inline-block;
   text-align: left;
   height: 170px;
@@ -161,9 +158,6 @@ MAP (LEFT SIDE)
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 2;
   color: white;
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 #popup_deal h4 {
@@ -175,10 +169,25 @@ MAP (LEFT SIDE)
   content: url(ekim.png);
   height: 100%;
   margin-right: 5px;
-
 }
 
-  @media (max-width: 500px){
+#nav_bottom{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/*************************************
+              MEDIA QUERIES
+**************************************/
+
+
+  @media (max-width: 700px){
+
+    .map-view-navbar {
+      display: inline;
+    }
+
     .categories-full-right-pane{
       display: none;
     }
@@ -194,41 +203,51 @@ MAP (LEFT SIDE)
       margin: none;
     }
 
-    .map-view-navbar{
-      width: 100%;
-      height: 50px;
-    }
-
     #popup_deal {
       height: 120px;
     }
 
     #popup_deal h4 {
       text-align: center;
-      margin-top: 10px;
+      margin-top: 14px;
+      font-size: 25px;
+      text-decoration: underline;
     }
 
-    #pop-up-timer {
+    #popup_deal p {
       text-align: center;
+      padding: 0;
+      margin: 0;
+      margin-top: 5px;
+      font-size: 20px;
+    }
+
+    #popup_deal #pop-up-timer {
+      color: #ED7763;
+      font-size: 18px;
     }
 
   }
 
-   @media (max-width: 768px){
+   @media (max-width:1400px) and (min-width:700px){
     .deal-display-element{
-      width: 95%;
-    }
-    .categories-right-pane-header h1 {
-      font-size: 10px;
-      color: red;
+      width: 90%;
     }
   }
 
-  @media (max-width: 1600px){
+   @media (max-width:1600px) and (min-width:1400px){
     .deal-display-element{
       width: 46%;
     }
   }
 
+  @media (min-width:1600px){
+    .deal-display-element{
+      width: 30%;
+    }
+  }
+
+ 
+   
   
 
