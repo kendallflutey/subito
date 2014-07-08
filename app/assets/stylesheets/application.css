@@ -42,12 +42,14 @@
 }
 
 .header-info {
-	margin-top: 15px;
+	margin-top: 20px;
 }
 
 .biz-nav-text {
 	text-decoration: none;
-	color: #2F2B2D;
+	color: #414141;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .header-hover:hover {
