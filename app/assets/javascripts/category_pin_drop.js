@@ -48,7 +48,6 @@ function getCoords() {
   }
 } 
 
-
 function createMarker(markerCoords, title, id, deal_image, description, finish_time) {
 
   var dealMarker = new google.maps.Marker({
@@ -61,6 +60,7 @@ function createMarker(markerCoords, title, id, deal_image, description, finish_t
     finish_time: finish_time
   });
 
+
   google.maps.event.addListener(dealMarker, 'click', function() {
      $('#nav_bottom').hide();
      $('#nav_bottom').empty();
@@ -68,5 +68,3 @@ function createMarker(markerCoords, title, id, deal_image, description, finish_t
      $('#nav_bottom').show("slowly");
   });
 }
-
- 
