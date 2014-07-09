@@ -1,3 +1,11 @@
+function getCoords() {
+  Modernizr.load({
+    test: Modernizr.geolocation,
+    yep : haveGeolocation(),
+    nope: 'geo.js'
+  });
+}
+
 function haveGeolocation() {
 
   navigator.geolocation.getCurrentPosition(function(position){
@@ -38,17 +46,6 @@ function haveGeolocation() {
       });
     }
   });
-}
-
-function getCoords() {
-
-  if (Modernizr.geolocation) {
-
-    haveGeolocation();
-  } else {
-    alert("Sorry, but your browser doesn't play nice with Subito...");
-  }
-
 }
 
 var countdown = new Countdown();
