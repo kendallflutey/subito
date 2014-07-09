@@ -8,7 +8,7 @@
 				<div class="business-deals-container">
 					
 						<% @deals.each do |deal| %>
-							<div class="listed-deal outline-inward">
+							<div class="listed-deal outline-inward" style="<%=deal_background_image(deal) %>">
 								<h3><%= deal.title %></h3>
 								<p><%= deal.description %></p>
 								<p>Live until: <%= deal.finish_time.strftime("%A %I:%M %P") %> </p>
