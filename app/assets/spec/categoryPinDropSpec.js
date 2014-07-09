@@ -1,14 +1,8 @@
-describe("Category Pin Drop", function(){
+describe("CategoryPinDrop", function(){
 
+  describe("Modernizr", function(){
 
-  describe("Check geolocation", function(){
-
-    beforeEach(function(){
-      this.coords = new getCoords();
-      this.url = '/categories/user_coords';
-    });
-
-    it("should call haveGeolocation function if browser can use geolocation", function(){
+    it("should call Modernizr.load", function(){
       spyOn(Modernizr, 'load');
       Modernizr.load();
       expect(Modernizr.load).toHaveBeenCalled();
@@ -22,7 +16,7 @@ describe("Category Pin Drop", function(){
 
       beforeEach(function(){
         haveGeolocation();
-        this.requestArgs = $.ajax.calls.argsFor(0)[0];
+        // this.requestArgs = $.ajax.calls.argsFor(0)[0];
       });
 
       it("makes a POST request", function() {
