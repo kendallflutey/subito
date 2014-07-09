@@ -20,5 +20,6 @@
 //= require modernizr
 //= require countdown
 //= require geo
+//= require mapView
 
 //= require_tree .

@@ -1,5 +1,3 @@
-
-
 function getCoords() {
   Modernizr.load({
     test: Modernizr.geolocation,
@@ -8,49 +6,24 @@ function getCoords() {
   });
 }
 
-var myLatlng;
-
-var displayMap = function() {
-
-  var mapOptions = {
-    zoom: 14,
-    center: myLatlng,
-    disableDefaultUI: true,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-
-  map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-}
-
 function haveGeolocation() {
 
   navigator.geolocation.getCurrentPosition(function(position){
 
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
-    myLatlng = new google.maps.LatLng(latitude, longitude);
+    var myLatlng = new google.maps.LatLng(latitude, longitude);
+    var createMap = new displayMap(myLatlng);
 
     $.ajax({
         url: '/categories/user_coords',
         type: 'POST',
         data: { latitude: latitude, longitude: longitude, id: categoryId },
         success: function(data){
-          displayMap();
+          createMap;
           processDeals(data);
         }
       });
-
-    // function displayMap() {
-
-    //   var mapOptions = {
-    //     zoom: 14,
-    //     center: myLatlng,
-    //     disableDefaultUI: true,
-    //     mapTypeId: google.maps.MapTypeId.ROADMAP
-    //   };
-
-    //   map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-    // }
 
     function processDeals(data) {
       $.each(data,function(index, deal){
