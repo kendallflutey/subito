@@ -20,7 +20,6 @@ class Business < ActiveRecord::Base
       business.provider = auth.provider
       business.uid = auth.uid
       business.name = auth.info.name
-      business.email = auth.info.email
       business.address = auth.info.location
     end
   end
