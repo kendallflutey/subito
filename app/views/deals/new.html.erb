@@ -3,15 +3,19 @@
 		<div class="business-profile-right-pane">
 
 			<div class="biz-deals">
+
 				<h1 class="biz-name-deals-header"><%=current_business.name %>'s Deals </h1>
+				<div class="stripe">
+				  <div class="line line-btm"></div>
+				</div>
 
 				<div class="business-deals-container">
 					
 						<% @deals.each do |deal| %>
-							<div class="listed-deal outline-inward" style="<%=deal_background_image(deal) %>">
-								<h3><%= deal.title %></h3>
-								<p><%= deal.description %></p>
-								<p>Live until: <%= deal.finish_time.strftime("%A %I:%M %P") %> </p>
+							<div class="listed-deal" style="<%=deal_background_image(deal) %>">
+								<div class="deal-title-box"><h2><%= deal.title %></h2></div>
+								<div class="deal-display-description"><h5><%= deal.description %></h5></div>
+								<div class="deal-display-footer"><h4> <%= deal.finish_time.strftime("%A %I:%M %P") %></h4></div>
 							</div>
 						<%end%>
 					

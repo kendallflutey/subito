@@ -44,13 +44,8 @@ Deal.create(title:"Free French Fries",
 			business_id: 1,
 			address: "257 Cuba St, Te Aro, Wellington 6011",
 			start_time: DateTime.now,
-<<<<<<< HEAD
 			finish_time: DateTime.new(2014,07,9,20,50,55),
 			deal_image: (File.open(File.join(Rails.root, '/app/assets/images/fries.jpg')))
-=======
-			finish_time: DateTime.new(2014,07,12,20,50,55),
-			deal_image: (File.open(File.join(Rails.root, '/app/assets/images/ekim.png')))
->>>>>>> master
 			)
 
 Deal.create(title:"half price shakes",
@@ -90,7 +85,7 @@ Deal.create(title:"half price coca cola!",
 			address: "120 Willis St, Wellington",
 			start_time: DateTime.now,
 			finish_time: DateTime.new(2014,07,9,15,50,55),
-			deal_image: (File.open(File.join(Rails.root, '/app/assets/images/cola.jpg')))
+			deal_image: (File.open(File.join(Rails.root, '/app/assets/images/soda.jpg')))
 			)
 
 Deal.create!(title:"Taco Mania",
@@ -100,7 +95,7 @@ Deal.create!(title:"Taco Mania",
 			address: "321 courtenay place, Wellington",
 			start_time: DateTime.now,
 			finish_time: DateTime.new(2014,07,9,20,50,55),
-			deal_image: (File.open(File.join(Rails.root, '/app/assets/images/taco,jpg')))
+			deal_image: (File.open(File.join(Rails.root, '/app/assets/images/taco.jpg')))
 			)
 
 
