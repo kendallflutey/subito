@@ -60,6 +60,7 @@ function createMarker(markerCoords, title, id, deal_image, description, start_ti
   google.maps.event.addListener(dealMarker, 'click', function() {
      $('#nav_bottom').hide();
      $('#nav_bottom').empty();
+     $('#nav_bottom').append('<div id="popup_deal"><div id="deal_image" style="background-image: url(\''+dealMarker.deal_image+'\');"></div><div id="popup-header"><h4>'+dealMarker.title+'!</h4></div>'+'<div id="popup-description"><p>'+dealMarker.description+'</p></div><div id="popup-footer"></div></div>');
      $('#nav_bottom').append(html);
      $('#nav_bottom').show("slowly");
 
@@ -70,3 +71,4 @@ function createMarker(markerCoords, title, id, deal_image, description, start_ti
      countdown.end(finish_time);
   });
 }
+
