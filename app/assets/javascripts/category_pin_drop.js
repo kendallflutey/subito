@@ -1,3 +1,11 @@
+function getCoords() {
+  Modernizr.load({
+    test: Modernizr.geolocation,
+    yep : haveGeolocation(),
+    nope: 'geo.js'
+  });
+}
+
 function haveGeolocation() {
 
   navigator.geolocation.getCurrentPosition(function(position){
@@ -38,14 +46,6 @@ function haveGeolocation() {
         createMarker(markerCoords, deal.title, deal.id, deal.deal_image, deal.description, finishTime);
       });
     }
-  });
-}
-
-function getCoords() {
-  Modernizr.load({
-    test: Modernizr.geolocation,
-    yep : haveGeolocation(),
-    nope: 'geo.js'
   });
 }
 
