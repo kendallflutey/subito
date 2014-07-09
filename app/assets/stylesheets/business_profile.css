@@ -59,7 +59,6 @@ BUSINESSES DEALS LISTINGS (RIGHT SIDE)
 
 .biz-name-deals-header {
   text-align: center;
-
   margin-bottom: 0;
   padding-bottom: 0;
   color: #414141;
@@ -107,15 +106,13 @@ BUSINESSES DEALS LISTINGS (RIGHT SIDE)
   margin-top: 50px;
 }
 
-
-
 .new-deal-form-container {
 	font-size: 20px;
 	text-align: left;
 	height: 100%;
   background-color: #F7F7F7;
   margin: auto;
-  width: 66%;
+  width: 40%;
   color: #414141;
   margin-top: 40px;
   border-radius: 5px;
