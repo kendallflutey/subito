@@ -284,33 +284,36 @@
   float: left;
   content: url(ekim.png);
   height: 100%;
-  margin-right: 5px;
+  width: 25%
 
 }
 
 #popup-header {
   height: 30%;
-  width: 100%;
+  width: 75%;
   background-color: #F238C1;
   display: block;
+  float: right;
 
 }
 
 #popup-header h4{
   margin-top: 0;
+  padding: 0;
   color: white;
   font-size: 2em;
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 7px;
+  padding-left: 10px;
 }
 
 #popup-description{
   height:50%;
-  width: 80%;
-  margin: auto;
-  padding: 0 10%;
-}
+  width: 75%;
+  padding-left: 22%;
+  padding-top: 10px;
+  }
 
 #popup-description p{
   padding-top: 2%;
