@@ -176,6 +176,28 @@
   		display: none;
   	}
 
+  	.edit-account{
+  	  right: 0;
+  	}
+
+  	.left-side-account-edit {
+  		width: 90%;
+  		padding-bottom: 70px;
+  	}
+
+  	.edit-account-field {
+  		width: 280px;
+  	}
+
+  	.edit-account-form label {
+  		font-size: 15px;
+  	} 
+
+  	.left-side-account-edit h2 {
+  		font-size: 25px;
+  	}	
+
+
 
   }
 
@@ -199,7 +221,25 @@
    	   	.cancel-options a {
    	   		font-size: 18px;
    	   		margin-left: 10px;
-   	   	}   	
+   	   	}  
+
+
+   	   	.left-side-account-edit {
+   	   		width: 90%;
+   	   		padding-bottom: 70px;
+   	   	}
+
+   	   	.edit-account-field {
+   	   		width: 280px;
+   	   	}
+
+   	   	.edit-account-form label {
+   	   		font-size: 15px;
+   	   	} 
+
+   	   	.left-side-account-edit h2 {
+   	   		font-size: 25px;
+   	   	}	
 
   }
 
@@ -215,6 +255,16 @@
 
 	   	.cancel-account h2 {
 	   		font-size: 25px;
+	   	}
+
+
+	   	.left-side-account-edit {
+	   		width: 77%;
+	   		padding-bottom: 130px;
+	   	}
+
+	   	.edit-account-field {
+	   		width: 300px;
 	   	}
 
   }
