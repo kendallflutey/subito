@@ -31,7 +31,8 @@
           <% else %>
             <%= link_to "Sign up", new_business_registration_path, class: "biz-nav-text" %> 
             <%= link_to "Login", new_business_session_path, class: "biz-nav-text nav-biz-mid" %>
-            <%= link_to "Sign in with Twitter", business_omniauth_authorize_path(:twitter), class: "biz-nav-text last-in-list" %>
+            <%= link_to "Sign in with Twitter", business_omniauth_authorize_path(:twitter), class: "biz-nav-text nav-biz-mid"   %>
+            <%= link_to "Sign in with Facebook", business_omniauth_authorize_path(:facebook), class: "biz-nav-text last-in-list"  %>
           <% end %>
         </div>
 
