@@ -46,12 +46,12 @@
 	height: 100%;
 	background-color: #F7F7F7;
 	margin: auto;
-	width: 66%;
+	width: 69%;
 	color: #414141;
 	border-radius: 5px;
 	margin-top: 250px;
 	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-bottom: 70px;
 }
 
 .cancel-account h2 {
@@ -63,7 +63,7 @@
 }
 
 .cancel-options {
-	margin-top: 20px;
+	margin-top: 70px;
 	padding: 0;
 	text-align: center;
 }
