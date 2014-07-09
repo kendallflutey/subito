@@ -73,6 +73,8 @@
   margin: auto;
   width: 80%;
   padding-top: 32px;
+  margin-top: 0;
+
 
 }
 
@@ -120,8 +122,8 @@
 .stripe {
   height: 20px;
   width: 100%;
-  position: relative;
-  padding-top: 80px;
+  display: block;
+
 }
 
 .line {
