@@ -41,7 +41,6 @@ function haveGeolocation() {
 
         var markerCoords = new google.maps.LatLng(deal.latitude, deal.longitude);
 
-        //"July 8, 2014 23:15:00"
         var finishTime = moment(deal.finish_time).toDate();
         createMarker(markerCoords, deal.title, deal.id, deal.deal_image, deal.description, finishTime);
       });
