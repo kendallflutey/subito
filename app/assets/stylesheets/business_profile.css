@@ -82,7 +82,7 @@ BUSINESSES DEALS LISTINGS (RIGHT SIDE)
 }
 
 .listed-deal {
-    height: 33%;
+  height: 33%;
   width: 30%;
   float:left;
   background-size: 100%;
@@ -108,6 +108,7 @@ BUSINESSES DEALS LISTINGS (RIGHT SIDE)
 }
 
 
+
 .new-deal-form-container {
 	font-size: 20px;
 	text-align: left;
@@ -116,8 +117,8 @@ BUSINESSES DEALS LISTINGS (RIGHT SIDE)
   margin: auto;
   width: 66%;
   color: #414141;
-  border-radius: 5px;
   margin-top: 40px;
+  border-radius: 5px;
 }
 
 .new-deal-form-container form {
@@ -130,6 +131,7 @@ BUSINESSES DEALS LISTINGS (RIGHT SIDE)
 
 .new-form-header-2 {
   background-color: #FFF;
+  border-radius: 5px;
 }
 
 .new-form-header-2 h2 {
@@ -172,6 +174,8 @@ BUSINESSES DEALS LISTINGS (RIGHT SIDE)
 .biz-name-deals-header {
   font-size: 25px;
 }
+
+
 
 /*************************************
               MEDIA QUERIES

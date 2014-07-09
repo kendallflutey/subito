@@ -24,7 +24,7 @@
 
 
 /*************************************
-    DEALS LISTINGS (RIGHT SIDE)
+    CANCEL ACCOUNT (RIGHT SIDE)
 **************************************/
 
 .right-side-account-leave {
@@ -32,22 +32,40 @@
   position: absolute;
   left: 55%;
   min-width: 50%;
-  background-image: url("bg.jpg");
+  background-image: url("cropped-bgimage.jpg");
+  background-size: cover;
+}
+
+.cancel-container {
+	width: 100%;
 }
 
 .cancel-account {
-	margin-top: 30%;
-	margin-left: 15%;
+	font-size: 20px;
+	text-align: left;
+	height: 100%;
+	background-color: #F7F7F7;
+	margin: auto;
+	width: 69%;
 	color: #414141;
+	border-radius: 5px;
+	margin-top: 250px;
+	padding-top: 50px;
+	padding-bottom: 70px;
+}
+
+.cancel-account h2 {
+	text-align: center;
 }
 
 .cancel-account p {
-	margin-left: 90px;
+	text-align: center;
 }
 
 .cancel-options {
-	margin-top: 20px;
+	margin-top: 70px;
 	padding: 0;
+	text-align: center;
 }
 
 .cancel-options ul {
@@ -59,21 +77,28 @@
 }
 
 .cancel-options .first {
-	margin-right: 50px;
+	font-size: 20px;
+	color: #89C7F2;
 }
 
 .cancel-options a {
-	font-size: 10px;
-	padding: 19px 70px;	
-	background-image: url("keep-account.png");
+	font-size: 20px;
+	color: #89C7F2;
+	text-decoration: none;
+	margin-left: 20px;
+}
+
+.cancel-options .first:hover {
+	color: #DA5ABB;
+}
+
+.cancel-options a:hover {
+	color: #DA5ABB;
 }
 
 .cancel-btn{
 	border: none;
-	background-color: transparent; 
-	background-image: url("delete-account.png"); 
-	padding: 20px 70px;	
-	font-size: 10px;
+	background-color: transparent;
 }
 
 .cancel-btn:hover {
@@ -92,24 +117,33 @@
   left: 0;
   right: 45%;
   top: 0;
-  background-color: #F7F7F7;
+  background-color: #A6C4CB;
 }
 
 .left-side-account-edit {
-  height: 100%;
-  width: 100%;
-  margin-top: 60px;
+  	font-size: 20px;
+	text-align: left;
+	height: 100%;
+	background-color: #F7F7F7;
+	margin: auto;
+	width: 66%;
+	color: #414141;
+	border-radius: 5px;
+	padding-top: 10px;
+	margin-top: 100px;
+	padding-bottom: 10px;
+	margin-bottom: 50px;
+	border: solid 1px #dadada;
 }
 
 .left-side-account-edit h2 {
 	text-align: left;
-	margin-top: 15%;
 	margin-left: 25%;
 	color: #414141;
 }
 
 .edit-account-form {
-	margin-left: 100px;
+	margin-left: 50px;
 	color: #414141;
 }
 
@@ -130,4 +164,121 @@
 	height: 50px;
 	width: 200px;
 }
+
+/*************************************
+              MEDIA QUERIES
+**************************************/
+
+
+  @media (max-width: 700px){
+
+  	.right-side-account-leave {
+  		display: none;
+  	}
+
+  	.edit-account{
+  	  right: 0;
+  	}
+
+  	.left-side-account-edit {
+  		width: 90%;
+  		padding-bottom: 70px;
+  	}
+
+  	.edit-account-field {
+  		width: 280px;
+  	}
+
+  	.edit-account-form label {
+  		font-size: 15px;
+  	} 
+
+  	.left-side-account-edit h2 {
+  		font-size: 25px;
+  	}	
+
+
+
+  }
+
+   @media (max-width:900px) and (min-width:700px){
+
+   	   	.cancel-account {
+   			padding-top: 15px;
+   			padding-bottom: 30px;
+   			width: 85%;
+   			margin-left: 10px;
+   	   	}
+
+   	   	.cancel-account h2 {
+   	   		font-size: 20px;
+   	   	}
+
+   	   	.cancel-options .first {
+   	   		font-size: 18px;
+   	   	}
+
+   	   	.cancel-options a {
+   	   		font-size: 18px;
+   	   		margin-left: 10px;
+   	   	}  
+
+
+   	   	.left-side-account-edit {
+   	   		width: 90%;
+   	   		padding-bottom: 70px;
+   	   	}
+
+   	   	.edit-account-field {
+   	   		width: 280px;
+   	   	}
+
+   	   	.edit-account-form label {
+   	   		font-size: 15px;
+   	   	} 
+
+   	   	.left-side-account-edit h2 {
+   	   		font-size: 25px;
+   	   	}	
+
+  }
+
+
+   @media (max-width:1300px) and (min-width:900px){
+ 
+	   	.cancel-account {
+			padding-top: 15px;
+			padding-bottom: 30px;
+			width: 78%;
+			margin-left: 20px;
+	   	}
+
+	   	.cancel-account h2 {
+	   		font-size: 25px;
+	   	}
+
+
+	   	.left-side-account-edit {
+	   		width: 77%;
+	   		padding-bottom: 130px;
+	   	}
+
+	   	.edit-account-field {
+	   		width: 300px;
+	   	}
+
+  }
+
+   @media (max-width:1800px) and (min-width:1300px){
+
+   
+    
+  }
+
+  @media (min-width:1800px){
+    
+
+  }
+
+
 

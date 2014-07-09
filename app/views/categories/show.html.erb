@@ -12,6 +12,7 @@
         <div id="category-menu">
           <div id="select-wrapper">
               <select id="page-select" class="styled">
+              <option value="/categories">All</option>
               <% @categories.each do |category| %>
                <option <% if category== @category%>selected = "selected" <% end %>value="<%= category_path(category) %>"><%= category.name %></option>
               <% end %>
