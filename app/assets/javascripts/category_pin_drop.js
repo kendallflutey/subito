@@ -74,9 +74,7 @@ function createMarker(markerCoords, title, id, deal_image, description, start_ti
      countdown.stop();
      countdown.onUpdate = function(formattedTimeLeft) { $('#pop-up-timer').html(formattedTimeLeft); };
      countdown.onComplete = function() { alert('Deal ended!'); };
-     console.log("StartTime" + start_time);
      countdown.start(start_time);
-     console.log("FinishTime" + finish_time);
      countdown.end(finish_time);
   });
 }
