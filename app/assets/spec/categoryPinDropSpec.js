@@ -4,7 +4,8 @@ describe("Category Pin Drop", function(){
   describe("Check geolocation", function(){
 
     beforeEach(function(){
-      getCoords();
+      this.coords = new getCoords();
+      this.url = '/categories/user_coords';
     });
 
     it("should call haveGeolocation function if browser can use geolocation", function(){
@@ -15,20 +16,21 @@ describe("Category Pin Drop", function(){
   });
 
   describe("Ajax call", function() {
-    xit("should make an ajax request to the correct URL", function(){
+    it("should make an ajax return correct parameters", function(){
       spyOn($, "ajax");
 
-      haveGeolocation();
-
-      expect($.ajax).toHaveBeenCalled({
-        url: '/categories/user_coords',
-        type: 'POST',
-        data: { latitude: latitude, longitude: longitude, id: categoryId },
-        success: function(data){
-          displayMap();
-          processDeals(data);
-        }
+      beforeEach(function(){
+        haveGeolocation();
+        this.requestArgs = $.ajax.calls.argsFor(0)[0];
       });
+
+       it("makes a POST request", function () {
+            expect(this.requestArgs.type).toEqual('POST');
+        });
+
+        it("categories user/coords show url", function () {
+            expect(this.requestArgs.url).toEqual('/game_state/show');
+        });
     });
   });
 
