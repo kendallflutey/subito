@@ -41,8 +41,9 @@ function haveGeolocation() {
 
         var markerCoords = new google.maps.LatLng(deal.latitude, deal.longitude);
 
+        var startTime = moment(deal.start_time).toDate();
         var finishTime = moment(deal.finish_time).toDate();
-        createMarker(markerCoords, deal.title, deal.id, deal.deal_image, deal.description, finishTime);
+        createMarker(markerCoords, deal.title, deal.id, deal.deal_image, deal.description, startTime, finishTime);
       });
     }
   });
@@ -50,7 +51,7 @@ function haveGeolocation() {
 
 var countdown = new Countdown();
 
-function createMarker(markerCoords, title, id, deal_image, description, finish_time) {
+function createMarker(markerCoords, title, id, deal_image, description, start_time, finish_time) {
 
   var dealMarker = new google.maps.Marker({
     position: markerCoords,
@@ -60,6 +61,7 @@ function createMarker(markerCoords, title, id, deal_image, description, finish_t
     icon: '/assets/map-pin-small.png',  
     deal_image: deal_image, 
     description: description,
+    start_time: start_time,
     finish_time: finish_time
   });
 
@@ -73,6 +75,7 @@ function createMarker(markerCoords, title, id, deal_image, description, finish_t
      countdown.stop();
      countdown.onUpdate = function(formattedTimeLeft) { $('#pop-up-timer').html(formattedTimeLeft); };
      countdown.onComplete = function() { alert('Deal ended!'); };
-     countdown.start(finish_time);
+     countdown.start(start_time);
+     countdown.end(finish_time);
   });
 }
