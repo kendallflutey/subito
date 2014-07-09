@@ -4,7 +4,7 @@ FactoryGirl.define do
 		sequence(:description) { |n| "I am description number #{n}" }
 		sequence(:address) { |n| "I am the address number #{n}" }
 		start_time DateTime.now
-		finish_time DateTime.now
+		finish_time DateTime.new(2014,07,12,20,50,55)
 		category_id 1
 		business_id 1
 	end
@@ -18,6 +18,12 @@ FactoryGirl.define do
 		sequence(:address) { |n| "I am address number #{n}" }
 		email "kendall@flutey.com"
 		password "password"
+		id 1
+	end
+
+	factory :category do 
+		id 1
+		sequence(:name) { |n| "I am the title number {n}"}
 	end
 
 end
