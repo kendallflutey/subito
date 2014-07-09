@@ -88,6 +88,14 @@
 	margin-left: 20px;
 }
 
+.cancel-options .first:hover {
+	color: #DA5ABB;
+}
+
+.cancel-options a:hover {
+	color: #DA5ABB;
+}
+
 .cancel-btn{
 	border: none;
 	background-color: transparent;
