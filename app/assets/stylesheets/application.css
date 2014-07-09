@@ -38,7 +38,7 @@
 	left: 0;
 	margin-left: 20px;
 	margin-top: 5px;
-	background-image: url("header-logo.png")
+	background-image: url("header-logo.png");
 }
 
 .header-info {
@@ -73,6 +73,3 @@
 	color: #67D3B1;
 }
 
-.error-messages {
-	margin-top: 50px;
-}
