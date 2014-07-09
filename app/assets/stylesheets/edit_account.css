@@ -32,17 +32,31 @@
   position: absolute;
   left: 55%;
   min-width: 50%;
-  background-image: url("bg.jpg");
+  background-image: url("bgimage.jpg");
+  background-size: cover;
+}
+
+.cancel-container {
+	width: 100%;
 }
 
 .cancel-account {
-	margin-top: 30%;
-	margin-left: 15%;
+	font-size: 20px;
+	text-align: left;
+	height: 100%;
+	background-color: #F7F7F7;
+	margin: auto;
+	width: 66%;
 	color: #414141;
+	border-radius: 5px;
+	margin-top: 250px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 .cancel-account p {
 	margin-left: 90px;
+
 }
 
 .cancel-options {
@@ -65,13 +79,12 @@
 .cancel-options a {
 	font-size: 10px;
 	padding: 19px 70px;	
-	background-image: url("keep-account.png");
+	background-color: red;
 }
 
 .cancel-btn{
 	border: none;
-	background-color: transparent; 
-	background-image: url("delete-account.png"); 
+	background-color: red; 
 	padding: 20px 70px;	
 	font-size: 10px;
 }
