@@ -1,41 +1,57 @@
-.edit-account {
-	float: left;
-	color: #FFF;
-	margin-left: 20%;
-	margin-top: 2%;
+/*************************************
+              BODY
+**************************************/
+
+.body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.edit-account-form {
-
-	font-size: 20px;
-	text-align: left;
-
+.edit-account-container {
+  width: 100%;
+  height:100%;
+  background-color: red;
 }
 
-.edit-account-field {
-	width: 350px;
-	height: 20px;
-	margin-top: 8px;
-	font-size: 12px;
-	color: black;
+.full-edit-conatiner{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height:100%;
+  background-color: #F7F7F7;
 }
 
-.update-account-btn {
-	margin-top: 20px;
-	text-align: center;
-	background-image: url("update-btn.png");
-	margin-left: 10%;
-	height: 50px;
-	width: 200px;
+
+/*************************************
+    DEALS LISTINGS (RIGHT SIDE)
+**************************************/
+
+.right-side-account-leave {
+  height: 100%;
+  position: absolute;
+  left: 55%;
+  min-width: 50%;
+  background-image: url("bg.jpg");
 }
 
 .cancel-account {
-	color: #FFF;
-	margin-top: 20%;
+	margin-top: 30%;
+	margin-left: 15%;
+	color: #414141;
+}
+
+.cancel-account p {
+	margin-left: 90px;
 }
 
 .cancel-options {
 	margin-top: 20px;
+	padding: 0;
+}
+
+.cancel-options ul {
+	padding: 0;
 }
 
 .cancel-options li {
@@ -63,3 +79,55 @@
 .cancel-btn:hover {
 	cursor: pointer;
 }
+
+/*************************************
+   EDIT ACCOUNT (LEFT SIDE)
+**************************************/
+
+.edit-account{
+  height: 100%;
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  left: 0;
+  right: 45%;
+  top: 0;
+  background-color: #F7F7F7;
+}
+
+.left-side-account-edit {
+  height: 100%;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.left-side-account-edit h2 {
+	text-align: left;
+	margin-top: 15%;
+	margin-left: 25%;
+	color: #414141;
+}
+
+.edit-account-form {
+	margin-left: 100px;
+	color: #414141;
+}
+
+.edit-account-field {
+	width: 350px;
+	height: 20px;
+	margin-bottom: 20px;
+	margin-top: 5px;
+	font-size: 12px;
+	color: black;
+}
+
+.update-account-btn {
+	margin-top: 20px;
+	text-align: center;
+	background-image: url("update-btn.png");
+	margin-left: 15%;
+	height: 50px;
+	width: 200px;
+}
+
