@@ -22,6 +22,8 @@
 //= require modernizr
 
 //= require customselect
+//= require kustomselect
+
 
 //= require applicationView
 
