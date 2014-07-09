@@ -4,6 +4,10 @@ class DealsController < ApplicationController
 
 	def index
 		@deals = Deal.where(business_id: current_business.id)
+
+    # The side affect of getting a list of things should not be creating something new.
+    # Your routes should adhere to RESTful conventions.
+    # Very bad practice.
     create
 	end
 

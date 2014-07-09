@@ -1,4 +1,5 @@
 class Business < ActiveRecord::Base
+  # Remove this scaffolding comments as it just adds clutter.
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and 
   devise :database_authenticatable, :registerable, :omniauthable,
@@ -35,6 +36,9 @@ class Business < ActiveRecord::Base
     end
   end
 
+  # Consider putting "new" part into it's own method.
+  # business_attributes = session["devise.business_attributes"]
+  # business_attributes ? new_based_on_session(business_attributes) : super
   def self.new_with_session(params, session)
     if session["devise.business_attributes"]
       new(session["devise.business_attributes"], without_protection: true) do |business|
@@ -54,6 +58,8 @@ class Business < ActiveRecord::Base
     super && provider.blank?
   end
 
+  # Personal pref but I think a ternary operator would be clearer
+  # encrypted_password.blank? ? update_attributes(params, *options) : super
   def update_with_password(params, *options)
     if encrypted_password.blank?
       update_attributes(params, *options)

@@ -1,3 +1,4 @@
+// Spec folder should not be in application file. Move into spec folder.
 describe("Category Pin Drop", function(){
 
   describe("ajax call", function() {

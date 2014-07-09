@@ -13,6 +13,8 @@ Subito::Application.routes.draw do
   resources :categories, only:[:index, :show]
   resources :deals, only:[:index, :create, :new]
 
+  # If this is strictly for the url path /buisnesses you can just use a namespace
+  # eg. See example commented out in this file
   resources :businesses, only:[] do
     resources :deals, only:[:index]
   end
