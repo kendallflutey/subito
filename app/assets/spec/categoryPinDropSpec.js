@@ -1,27 +1,36 @@
 describe("Category Pin Drop", function(){
 
-  describe("ajax call", function() {
-    it("passed parameters to ajax", function(){
-      spyOn($, "ajax");
-      haveGeolocation();
+  describe("Check geolocation", function(){
 
-      expect($.ajax).toHaveBeenCalledWith({
-        url: '/categories/user_coords',
-        type: 'POST',
-        data: { latitude: latitude, longitude: longitude, id: categoryId },
-        success: function(data){
-          displayMap();
-          processDeals(data);
-        }
-      });
+    beforeEach(function(){
+      getCoords();
+    });
+
+    it("should call haveGeolocation function if browser can use geolocation", function(){
+      spyOn(Modernizr, 'load');
+      expect(Modernizr.load).toHaveBeenCalled();
     });
   });
 
-  describe("displayMap", function() {
-    xit("should return a mapOption var zoom property of 14", function() {
-      expect(mapOptions.zoom).toEqual(14);
-    });
-  });
+  // describe("Ajax call", function() {
+  //   it("should make an ajax request to the correct URL", function(){
+  //     spyOn($, "ajax");
 
+  //     expect($.ajax).toHaveBeenCalled({
+  //       url: '/categories/user_coords',
+  //       type: 'POST',
+  //       data: { latitude: latitude, longitude: longitude, id: categoryId },
+  //       success: function(data){
+  //         displayMap();
+  //         processDeals(data);
+  //       }
+  //     });
+  //   });
+  // });
 
+  // describe("displayMap", function() {
+  //   xit("should return a mapOption var zoom property of 14", function() {
+  //     expect(mapOptions.zoom).toEqual(14);
+  //   });
+  // });
 });

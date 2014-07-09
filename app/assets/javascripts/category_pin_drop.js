@@ -57,8 +57,8 @@ function createMarker(markerCoords, title, id, deal_image, description, finish_t
     map: map,
     title: title,
     id: id,
-    icon: '/assets/map-pin-small.png',  
-    deal_image: deal_image, 
+    icon: '/assets/map-pin-small.png',
+    deal_image: deal_image,
     description: description,
     finish_time: finish_time
   });
