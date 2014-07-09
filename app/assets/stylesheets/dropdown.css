@@ -1,9 +1,9 @@
-span.customSelect { 
+span.customSelect {
     font:16px sans-serif;
     background: white url(http://i48.tinypic.com/2u7rpec.png) right center no-repeat;
     border:1px solid #ddd;
     color:#31B4F5;
-    padding:10px 9px;
+    padding:10px 7px;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px 2px;
