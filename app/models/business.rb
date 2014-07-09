@@ -11,15 +11,26 @@ class Business < ActiveRecord::Base
 
   has_many :deals
 
-  validates :name, presence: true
-  validates :email, uniqueness: {message: "The email is already registered, please login if it's yours"}
+  validates :name, presence: true, :if => 'provider.blank?'
+  validates :email, uniqueness: {message: "The email is already registered, please login if it's yours"}, :if => 'provider.blank?'
   validates :email, format: { with: /.+@.+\..{2,}/}, :if => 'provider.blank?'
 
-  def self.from_omniauth(auth)
+  def self.twitter_from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_create do |business|
       business.provider = auth.provider
       business.uid = auth.uid
       business.name = auth.info.name
+      business.email = auth.info.email
+      business.address = auth.info.location
+    end
+  end
+
+  def self.facebook_from_omniauth(auth)
+    where(auth.slice(:provider, :uid)).first_or_create do |business|
+      business.provider = auth.provider
+      business.uid = auth.uid
+      business.name = auth.info.name
+      business.email = auth.info.email
       business.address = auth.info.location
     end
   end

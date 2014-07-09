@@ -4,7 +4,7 @@ Subito::Application.routes.draw do
   devise_for :businesses, path_names: {sign_in: "login", sign_out: "logout"},
                           controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
-  root to: "categories#index"
+  root to: "categories#show", id: 1
 
   get "/getdeals", to: "categories#getdeals"
 
@@ -13,7 +13,7 @@ Subito::Application.routes.draw do
   resources :categories, only:[:index, :show]
   resources :deals, only:[:index, :create, :new]
 
-  resources :businesses, only:[] do
+  scope "businesses/:business_id",  as: :business do
     resources :deals, only:[:index]
   end
 

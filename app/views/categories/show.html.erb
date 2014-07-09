@@ -12,7 +12,6 @@
         <div id="category-menu">
           <div id="select-wrapper">
               <select id="page-select" class="styled">
-              <option value="/categories">All</option>
               <% @categories.each do |category| %>
                <option <% if category== @category%>selected = "selected" <% end %>value="<%= category_path(category) %>"><%= category.name %></option>
               <% end %>
@@ -61,7 +60,7 @@
           <div id="map-canvas"></div>
           <div id="nav_bottom"></div>
     </div>
-    
+
   </div>
 </div>
 
@@ -71,4 +70,13 @@ $(document).ready(function() {
   getCoords();
 
 });
+</script>
+
+<script id="deal-template" type="text/x-handlebars-template">
+  <div id="popup_deal">
+    <div id="deal_image"></div>
+    <h4>{{ title }}</h4>
+    <p id="popup-description">{{ description }}</p>
+    <p id="pop-up-timer"></p>
+  </div>
 </script>

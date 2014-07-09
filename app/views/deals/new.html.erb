@@ -3,15 +3,19 @@
 		<div class="business-profile-right-pane">
 
 			<div class="biz-deals">
+
 				<h1 class="biz-name-deals-header"><%=current_business.name %>'s Deals </h1>
+				<div class="stripe">
+				  <div class="line line-btm"></div>
+				</div>
 
 				<div class="business-deals-container">
 					
 						<% @deals.each do |deal| %>
-							<div class="listed-deal outline-inward" style="<%=deal_background_image(deal) %>">
-								<h3><%= deal.title %></h3>
-								<p><%= deal.description %></p>
-								<p>Live until: <%= deal.finish_time.strftime("%A %I:%M %P") %> </p>
+							<div class="listed-deal" style="<%=deal_background_image(deal) %>">
+								<div class="deal-title-box"><h2><%= deal.title %></h2></div>
+								<div class="deal-display-description"><h5><%= deal.description %></h5></div>
+								<div class="deal-display-footer"><h4> <%= deal.finish_time.strftime("%A %I:%M %P") %></h4></div>
 							</div>
 						<%end%>
 					
@@ -44,10 +48,10 @@
 					<%= f.collection_select :category_id, Category.all, :id, :name, class: "new-deal-field float-form"%>
 
 					<%= f.label :start_time, "When does your deal go live?", class: "live-deal-field" %>
-					<%= f.datetime_select :start_time, class: "new-deal-field live-deal-field" %>
+					<%= f.datetime_select :start_time, :order => [:year, :month, :day, :hour, :minute],  ampm: true, :minute_step => 5, class: "new-deal-field live-deal-field" %>
 
 					<%= f.label :finish_time, "When does your deal end?" %>
-					<%= f.datetime_select :finish_time, class: "new-deal-field"%>
+					<%= f.datetime_select :finish_time, :order => [:year, :month, :day, :hour, :minute], :minute_step => 5,  ampm: true, :default => 2.hours.from_now, class: "new-deal-field"%>
 
 					<%= f.label :deal_image, "Upload a deal image" %>
 					<%= f.file_field :deal_image, class: "new-deal-field" %>

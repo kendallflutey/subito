@@ -1,27 +1,33 @@
-describe("Category Pin Drop", function(){
+describe("CategoryPinDrop", function(){
 
-  describe("ajax call", function() {
-    it("passed parameters to ajax", function(){
+  describe("Modernizr", function(){
+
+    it("should call Modernizr.load", function(){
+      spyOn(Modernizr, 'load');
+      Modernizr.load();
+      expect(Modernizr.load).toHaveBeenCalled();
+    });
+  });
+
+  describe("Ajax call", function() {
+
+    it("should make an ajax return correct parameters", function(){
       spyOn($, "ajax");
-      haveGeolocation();
 
-      expect($.ajax).toHaveBeenCalledWith({
-        url: '/categories/user_coords',
-        type: 'POST',
-        data: { latitude: latitude, longitude: longitude, id: categoryId },
-        success: function(data){
-          displayMap();
-          processDeals(data);
-        }
+      beforeEach(function(){
+        haveGeolocation();
+        // this.requestArgs = $.ajax.calls.argsFor(0)[0];
+      });
+
+      it("makes a POST request", function() {
+          expect(this.requestArgs.type).toEqual('POST');
+      });
+
+      it("categories user/coords show url", function () {
+          expect(this.requestArgs.url).toEqual('/game_state/show');
       });
     });
   });
-
-  describe("displayMap", function() {
-    xit("should return a mapOption var zoom property of 14", function() {
-      expect(mapOptions.zoom).toEqual(14);
-    });
-  });
-
-
 });
+
+
