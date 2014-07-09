@@ -11,7 +11,7 @@
 							<div class="listed-deal outline-inward">
 								<h3><%= deal.title %></h3>
 								<p><%= deal.description %></p>
-								<p>Running until: <%= deal.finish_time %> </p>
+								<p>Live until: <%= deal.finish_time.strftime("%A %I:%M %P") %> </p>
 							</div>
 						<%end%>
 					

@@ -22,4 +22,10 @@ class DealsController < ApplicationController
     end
   end
 
+  def destroy
+    @deal = Post.find(params[:id])
+    @deal.destroy
+    business_deals_path(current_business)
+  end
+
 end
