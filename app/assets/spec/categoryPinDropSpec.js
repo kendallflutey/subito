@@ -16,6 +16,7 @@ describe("Category Pin Drop", function(){
   });
 
   describe("Ajax call", function() {
+
     it("should make an ajax return correct parameters", function(){
       spyOn($, "ajax");
 
@@ -24,13 +25,13 @@ describe("Category Pin Drop", function(){
         this.requestArgs = $.ajax.calls.argsFor(0)[0];
       });
 
-       it("makes a POST request", function () {
-            expect(this.requestArgs.type).toEqual('POST');
-        });
+      it("makes a POST request", function () {
+          expect(this.requestArgs.type).toEqual('POST');
+      });
 
-        it("categories user/coords show url", function () {
-            expect(this.requestArgs.url).toEqual('/game_state/show');
-        });
+      it("categories user/coords show url", function () {
+          expect(this.requestArgs.url).toEqual('/game_state/show');
+      });
     });
   });
 
