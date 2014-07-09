@@ -5,7 +5,8 @@ function Countdown() {
   this.onUpdate;
   this.onComplete;
 
-  var targetDate;
+  var targetStartTime;
+  var targetEndTime;
   var interval;
   var hourElem;
   var minuteElem;
@@ -15,16 +16,25 @@ function Countdown() {
     clearInterval(interval);
   };
 
-  this.start = function(finishTime) {
-    targetDate = finishTime;
+  this.start = function(startTime) {
+    targetStartTime = startTime;
+  };
+
+  this.end = function(finishTime) {
+    targetEndTime = finishTime;
     // interval = setInterval(this.update, 1000);
     interval = setInterval((function(self) {
       return function() { self.update(); }
     })(this), 1000);
+
   };
 
   this.update = function() {
-    var secondsLeft = (targetDate.getTime() - new Date().getTime()) / 1000;
+    if(targetStartTime.getTime() < new Date().getTime())
+    {
+    var secondsLeft = (targetEndTime.getTime() - new Date().getTime()) / 1000;
+    }
+
     if (secondsLeft < 0) {
       this.stop();
       if (this.onComplete)
@@ -65,9 +75,6 @@ function Countdown() {
   } else {
     secondElem = '00';
   }
-
-
-
     if (this.onUpdate)
       //this.onUpdate(days + " days, " + hourElem + minuteElem  + secondElem);
       this.onUpdate(hourElem + minuteElem  + secondElem);

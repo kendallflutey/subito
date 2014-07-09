@@ -44,10 +44,10 @@
 					<%= f.collection_select :category_id, Category.all, :id, :name, class: "new-deal-field float-form"%>
 
 					<%= f.label :start_time, "When does your deal go live?", class: "live-deal-field" %>
-					<%= f.datetime_select :start_time, class: "new-deal-field live-deal-field" %>
+					<%= f.datetime_select :start_time, :order => [:year, :month, :day, :hour, :minute],  ampm: true, :minute_step => 5, class: "new-deal-field live-deal-field" %>
 
 					<%= f.label :finish_time, "When does your deal end?" %>
-					<%= f.datetime_select :finish_time, class: "new-deal-field"%>
+					<%= f.datetime_select :finish_time, :order => [:year, :month, :day, :hour, :minute], :minute_step => 5,  ampm: true, :default => 2.hours.from_now, class: "new-deal-field"%>
 
 					<%= f.label :deal_image, "Upload a deal image" %>
 					<%= f.file_field :deal_image, class: "new-deal-field" %>

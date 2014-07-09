@@ -4,7 +4,14 @@ class DealsController < ApplicationController
 
 	def index
 		@deals = Deal.where(business_id: current_business.id)
-    create
+    @deal = Deal.new(params[:deal])
+
+    if @deal.save
+      flash[:notice] = "Your deal was created and will start at: #{@deal.start_time}"
+      redirect_to business_deals_path(current_business)
+    else
+      render :new
+    end
 	end
 
 	def new
@@ -20,6 +27,7 @@ class DealsController < ApplicationController
     else
       render :new
     end
+    
   end
 
 end

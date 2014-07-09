@@ -44,8 +44,13 @@ Deal.create(title:"Free French Fries",
 			business_id: 1,
 			address: "257 Cuba St, Te Aro, Wellington 6011",
 			start_time: DateTime.now,
+<<<<<<< HEAD
 			finish_time: DateTime.new(2014,07,9,20,50,55),
 			deal_image: (File.open(File.join(Rails.root, '/app/assets/images/fries.jpg')))
+=======
+			finish_time: DateTime.new(2014,07,12,20,50,55),
+			deal_image: (File.open(File.join(Rails.root, '/app/assets/images/ekim.png')))
+>>>>>>> master
 			)
 
 Deal.create(title:"half price shakes",
