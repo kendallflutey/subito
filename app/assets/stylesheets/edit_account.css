@@ -11,7 +11,6 @@
 .edit-account-container {
   width: 100%;
   height:100%;
-  /*background-color: #F7F7F7;*/
   background-color: red;
 }
 
@@ -20,8 +19,7 @@
   padding: 0;
   width: 100%;
   height:100%;
-  background-color: green;
-  /*background-image: url("bg.jpg");*/
+  background-color: #F7F7F7;
 }
 
 
@@ -32,7 +30,7 @@
 .right-side-account-leave {
   height: 100%;
   position: absolute;
-  left: 60%;
+  left: 55%;
   min-width: 50%;
   background-image: url("bg.jpg");
 }
@@ -92,46 +90,34 @@
   overflow-y: scroll;
   overflow-x: hidden;
   left: 0;
-  right: 40%;
+  right: 45%;
   top: 0;
-  background-color: purple;
+  background-color: #F7F7F7;
 }
 
 .left-side-account-edit {
   height: 100%;
   width: 100%;
-  background-color: yellow;
   margin-top: 60px;
 }
 
 .left-side-account-edit h2 {
-	text-align: center;
-	margin-top: 20%;
-}
-
-.edit-account-form {
-	background-color: orange;
-	margin-left: 40px;
-}
-
-/*.edit-account {
-	float: left;
-	color: #FFF;
-	margin-left: 20%;
-	margin-top: 2%;
-}
-
-.edit-account-form {
-
-	font-size: 20px;
 	text-align: left;
+	margin-top: 15%;
+	margin-left: 25%;
+	color: #414141;
+}
 
+.edit-account-form {
+	margin-left: 100px;
+	color: #414141;
 }
 
 .edit-account-field {
 	width: 350px;
 	height: 20px;
-	margin-top: 8px;
+	margin-bottom: 20px;
+	margin-top: 5px;
 	font-size: 12px;
 	color: black;
 }
@@ -140,7 +126,7 @@
 	margin-top: 20px;
 	text-align: center;
 	background-image: url("update-btn.png");
-	margin-left: 10%;
+	margin-left: 15%;
 	height: 50px;
 	width: 200px;
 }
