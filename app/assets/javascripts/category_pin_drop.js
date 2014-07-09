@@ -55,7 +55,7 @@ function createMarker(markerCoords, title, id, deal_image, description, start_ti
   var source = $("#deal-template").html();
   var template = Handlebars.compile(source);
   var context = {
-    image: "content: url(\''+(dealMarker.deal_image['url'])+'\');",
+    image: "content:url('"+(dealMarker.deal_image['url'])+"');",
     title: dealMarker.title,
     description: dealMarker.description
   };
