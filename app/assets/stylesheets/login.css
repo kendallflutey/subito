@@ -3,26 +3,43 @@
 	font-family: 'Open Sans', sans-serif;
 	margin-top: 10%;
 	font-size: 20px;
-	text-align: left;
-	margin-left: 35%;
+	text-align: center;
+	padding-top: 30px;
 }
 
 .remember-me {
 	font-size: 12px;
 }
 
+.login-container {
+	font-size: 20px;
+	text-align: left;
+	height: 100%;
+	background-color: #F7F7F7;
+	margin: auto;
+	width: 40%;
+	color: #414141;
+	margin-top: 200px;
+	border-radius: 10px; 
+}
+
+.login-form label {
+	color: #414141;
+}
+
 .login-btn {
 	text-align: center;
 	background-image: url("login.png");
-	margin-left: 14%;
+	margin-left: 40%;
 	height: 50px;
 	width: 100px;
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .password-prompt {
 	text-decoration: none;
-	color: #FFF;
+	color: #414141;
 	font-size: 12px;
 }
 

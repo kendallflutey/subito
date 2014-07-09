@@ -8,13 +8,15 @@ html, body {
 .sign-up-login-container {
 	height: 100%;
 	width: 100%;
-	background-image: url("bg.jpg");
+	background-image: url("bgimage.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding-top: 20px;
 	font-family: 'Open Sans', sans-serif;
 	padding-top: 20px;
 }
+
+
 
 .sign-up-login-logo {
 	text-align: left;
