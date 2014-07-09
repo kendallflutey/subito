@@ -17,6 +17,7 @@
 	margin-left: 14%;
 	height: 50px;
 	width: 100px;
+	margin-top: 20px;
 }
 
 .password-prompt {
@@ -28,3 +29,28 @@
 .password-prompt:hover {
 	color: #ED7763;
 }
+
+/*************************************
+              MEDIA QUERIES
+**************************************/
+
+
+  @media (max-width: 584px){
+  	.login-form {
+  		margin-left: 5%;
+ 
+  	}
+
+  }
+
+   @media (max-width:980px) and (min-width:584px){
+   	.login-form {
+   		margin-left: 20%;
+   	}
+  }
+
+   @media (max-width:1200px) and (min-width:980px){
+    .login-form {
+    	margin-left: 25%;
+    }
+  }
