@@ -7,8 +7,8 @@ class CategoriesController < ApplicationController
 	def show
     @categories = Category.all
 		@category = Category.find(params[:id])
-		@deals = Deal.where(category_id: @category.id)
 
+    @deals = Deal.where(category_id: @category.id)
 	end
 
   def user_coords
