@@ -18,7 +18,7 @@ describe DealsController do
 			expect(assigns(:deals)).to eq(Deal.all)
 		end
 
-		it "response with OK" do 
+		it "responds with OK" do 
 			response.code.should eq("200")
 		end
 
@@ -26,7 +26,7 @@ describe DealsController do
 			expect(assigns(:deal)).to be_a(Deal)
 		end
 
-		it "renders the index template" do 
+		it "renders the correct template" do 
 			response.should render_template("new")
 		end
 	end
@@ -34,7 +34,7 @@ describe DealsController do
 	describe "#new" do 
 
 		before(:each) do
-			get :index
+			get :new
 		end
 
 		it "creates a new instance of Deal" do 
@@ -45,7 +45,7 @@ describe DealsController do
 			response.should render_template("new")
 		end
 
-		it "response with OK" do 
+		it "responds with OK" do 
 			response.code.should eq("200")
 		end
 	end
@@ -75,7 +75,7 @@ describe DealsController do
     			flash[:notice].should_not be_nil
     		end
 
-    		it "response with OK" do 
+    		it "responds with OK" do 
     			response.code.should eq("200")
     		end
 		end

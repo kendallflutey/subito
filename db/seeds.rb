@@ -44,7 +44,7 @@ Deal.create(title:"FREE UPPERCASE FRIES",
 			business_id: 1,
 			address: "257 Cuba St, Te Aro, Wellington 6011",
 			start_time: DateTime.now,
-			finish_time: DateTime.new(2014,07,9,20,50,55),
+			finish_time: DateTime.new(2014,07,12,20,50,55),
 			deal_image: (File.open(File.join(Rails.root, '/app/assets/images/ekim.png')))
 			)
 

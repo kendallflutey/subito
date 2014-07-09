@@ -21,4 +21,9 @@ FactoryGirl.define do
 		id 1
 	end
 
+	factory :category do 
+		id 1
+		sequence(:name) { |n| "I am the title number {n}"}
+	end
+
 end
