@@ -30,13 +30,10 @@ class Business < ActiveRecord::Base
       business.provider = auth.provider
       business.uid = auth.uid
       business.name = auth.info.name
-      puts "made it here!"
-
       business.email = auth.info.email
-      business.address = auth.location
+      business.address = auth.info.location
     end
   end
-
 
   def self.new_with_session(params, session)
     if session["devise.business_attributes"]
