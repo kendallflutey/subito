@@ -5,7 +5,7 @@
 			<div class="biz-deals">
 				<div class="header-profile-container">
 
-					<h1 class="biz-name-deals-header">Hey <%=current_business.name %>, check out your deals: </h1>
+					<h1 class="biz-name-deals-header">Hey <span class="biz-name-span"><%=current_business.name %></span>, check out your deals: </h1>
 				</div>
 				<div class="stripe profile-stripe">
 				  <div class="line line-btm"></div>
@@ -31,7 +31,13 @@
 		<div class="profile-deal-maker">
 
 			<div class="new-deal-form-container">
-				<h2>Start a new Deal</h2>
+				<div class="new-form-header-2">
+					<h2>Start a new Deal</h2>
+				</div>
+
+				<div class="stripe profile-stripe">
+				  <div class="line line-btm"></div>
+				</div>
 
 				<%= form_for @deal, :html => {:multipart => true} do |f| %>
 
@@ -47,16 +53,16 @@
 					<%= f.text_field :address, placeholder: "13 Awesome Street, Wellington, NZ", class: "new-deal-field"%>
 
 					<%= f.label :category_id, "Which sounds like this deal?" %>
-					<%= f.collection_select :category_id, Category.all, :id, :name, class: "new-deal-field float-form"%>
+					<%= f.collection_select :category_id, Category.all, :id, :name, class: "new-deal-field "%><br/><br/>
 
-					<%= f.label :start_time, "When does your deal go live?", class: "live-deal-field" %>
-					<%= f.datetime_select :start_time, :order => [:year, :month, :day, :hour, :minute],  ampm: true, :minute_step => 5, class: "new-deal-field live-deal-field" %>
+					<%= f.label :start_time, "When does your deal go live?"%>
+					<%= f.datetime_select :start_time, :order => [:year, :month, :day, :hour, :minute],  ampm: true, :minute_step => 5, class: "new-deal-field live-deal-field" %><br/>
 
 					<%= f.label :finish_time, "When does your deal end?" %>
-					<%= f.datetime_select :finish_time, :order => [:year, :month, :day, :hour, :minute], :minute_step => 5,  ampm: true, :default => 2.hours.from_now, class: "new-deal-field"%>
+					<%= f.datetime_select :finish_time, :order => [:year, :month, :day, :hour, :minute], :minute_step => 5,  ampm: true, :default => 2.hours.from_now, class: "new-deal-field"%><br/>
 
 					<%= f.label :deal_image, "Upload a deal image" %>
-					<%= f.file_field :deal_image, class: "new-deal-field" %>
+					<%= f.file_field :deal_image, class: "new-deal-field", id: "deal-image-uploader" %>
 
 					<div class="launch-deal-btn"><%= f.submit "", class: "no-style" %></div>
 				<%end%>
