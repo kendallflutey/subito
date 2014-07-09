@@ -58,8 +58,8 @@ function createMarker(markerCoords, title, id, deal_image, description, start_ti
     map: map,
     title: title,
     id: id,
-    icon: '/assets/map-pin-small.png',  
-    deal_image: deal_image, 
+    icon: '/assets/map-pin-small.png',
+    deal_image: deal_image,
     description: description,
     start_time: start_time,
     finish_time: finish_time
