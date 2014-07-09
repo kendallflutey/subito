@@ -25,7 +25,7 @@ describe("Category Pin Drop", function(){
         this.requestArgs = $.ajax.calls.argsFor(0)[0];
       });
 
-      it("makes a POST request", function () {
+      it("makes a POST request", function() {
           expect(this.requestArgs.type).toEqual('POST');
       });
 
@@ -34,10 +34,6 @@ describe("Category Pin Drop", function(){
       });
     });
   });
-
-  describe("displayMap", function() {
-    xit("should return a mapOption var zoom property of 14", function() {
-      expect(mapOptions.zoom).toEqual(14);
-    });
-  });
 });
+
+
