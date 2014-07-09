@@ -4,14 +4,6 @@ class DealsController < ApplicationController
 
 	def index
 		@deals = Deal.where(business_id: current_business.id)
-    create
-	end
-
-	def new
-    	@deal = Deal.new
-  end
-
-  def create
     @deal = Deal.new(params[:deal])
 
     if @deal.save
@@ -20,6 +12,10 @@ class DealsController < ApplicationController
     else
       render :new
     end
+	end
+
+	def new
+    	@deal = Deal.new
   end
 
 end
