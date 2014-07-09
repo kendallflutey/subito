@@ -24,7 +24,7 @@
 
 
 /*************************************
-    DEALS LISTINGS (RIGHT SIDE)
+    CANCEL ACCOUNT (RIGHT SIDE)
 **************************************/
 
 .right-side-account-leave {
@@ -32,7 +32,7 @@
   position: absolute;
   left: 55%;
   min-width: 50%;
-  background-image: url("bgimage.jpg");
+  background-image: url("cropped-bgimage.jpg");
   background-size: cover;
 }
 
@@ -117,24 +117,33 @@
   left: 0;
   right: 45%;
   top: 0;
-  background-color: #F7F7F7;
+  background-color: #A6C4CB;
 }
 
 .left-side-account-edit {
-  height: 100%;
-  width: 100%;
-  margin-top: 60px;
+  	font-size: 20px;
+	text-align: left;
+	height: 100%;
+	background-color: #F7F7F7;
+	margin: auto;
+	width: 66%;
+	color: #414141;
+	border-radius: 5px;
+	padding-top: 10px;
+	margin-top: 100px;
+	padding-bottom: 10px;
+	margin-bottom: 50px;
+	border: solid 1px #dadada;
 }
 
 .left-side-account-edit h2 {
 	text-align: left;
-	margin-top: 15%;
 	margin-left: 25%;
 	color: #414141;
 }
 
 .edit-account-form {
-	margin-left: 100px;
+	margin-left: 50px;
 	color: #414141;
 }
 
