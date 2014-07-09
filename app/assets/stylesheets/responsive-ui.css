@@ -1,3 +1,5 @@
+
+
 /*************************************
               BODY
 **************************************/
@@ -119,7 +121,7 @@
 }
 
 .deal-display-element{
-  height: 20%;
+  height: 33%;
   width: 30%;
   float:left;
   /*background-image: url(ekim.png);*/
@@ -127,11 +129,65 @@
   margin-left: 2.5%;
   margin-bottom: 1.25vw;
   color: white;
-  -webkit-box-shadow: -4px 5px 4px 0px rgba(50, 50, 50, 0.52);
-  -moz-box-shadow:    -4px 5px 4px 0px rgba(50, 50, 50, 0.52);
-  box-shadow:         -4px 5px 4px 0px rgba(50, 50, 50, 0.52);
+  -webkit-box-shadow: -4px 5px 4px 0px rgba(50, 50, 50, 0.20);
+  -moz-box-shadow:    -4px 5px 4px 0px rgba(50, 50, 50, 0.20);
+  box-shadow:         -4px 5px 4px 0px rgba(50, 50, 50, 0.20);
 }
 
+.deal-display-element h5{
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+
+}
+
+.deal-title-box {
+  background-color: #EBEBEB;
+  height:20%;
+  font-size: 20px;
+
+}
+
+.deal-title-box h2{
+  margin: 0;
+  padding:0;
+  font-size: 20px;
+  margin-top: 15px;
+  padding-left: 7px;
+}
+
+.deal-display-description{
+  height: 60%;  
+  width: 100%;
+}
+
+.deal-display-description h5{
+  margin-top: 15px;
+  padding-left: 0px;
+  font-size: 20px;
+
+}
+
+.deal-display-footer{
+  height: 20%;
+  width: 100%;
+
+}
+
+.deal-display-footer h4{
+  margin: 0;
+  padding: 0;
+  margin-right: 7px;
+  padding-right: 3px;
+  text-align: right;
+  background-color: #F238C1;
+  max-width:74%;
+  float:right;
+  border-radius: 3px;
+  height: 24px;
+
+}
 
 /*************************************
     MAP DISPLAY (LEFT SIDE)
@@ -194,16 +250,52 @@
   color: white;
 }
 
-#popup_deal h4 {
-  margin: 0;
-}
 
 #deal_image {
   float: left;
   content: url(ekim.png);
   height: 100%;
   margin-right: 5px;
+
 }
+
+#popup-header {
+  height: 30%;
+  width: 100%;
+  background-color: #F238C1;
+  display: block;
+
+}
+
+#popup-header h4{
+  margin-top: 0;
+  color: white;
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+
+#popup-description{
+  height:50%;
+  width: 80%;
+  margin: auto;
+  padding: 0 10%;
+}
+
+#popup-description p{
+  padding-top: 2%;
+  padding-left: 20px;
+  margin: 0;
+  margin-left: 20px;
+  font-size: 1.2em;
+}
+
+#popup-footer{
+  height: 20%;
+  background-color: yellow;
+}
+
 
 #nav_bottom{
   position: absolute;
@@ -260,26 +352,22 @@
       font-size: 20px;
     }
 
-    #popup_deal #pop-up-timer {
-      color: #ED7763;
-      font-size: 18px;
-    }
 
   }
 
-   @media (max-width:980px) and (min-width:584px){
+   @media (max-width:1200px) and (min-width:584px){
     .deal-display-element{
       width: 90%;
     }
   }
 
-   @media (max-width:1200px) and (min-width:980px){
+   @media (max-width:1800px) and (min-width:1200px){
     .deal-display-element{
       width: 46%;
     }
   }
 
-  @media (min-width:1200px){
+  @media (min-width:1800px){
     .deal-display-element{
       width: 30%;
     }

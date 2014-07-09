@@ -67,7 +67,7 @@ function createMarker(markerCoords, title, id, deal_image, description, finish_t
   google.maps.event.addListener(dealMarker, 'click', function() {
      $('#nav_bottom').hide();
      $('#nav_bottom').empty();
-     $('#nav_bottom').append('<div id="popup_deal"><div id="deal_image"></div><h4>'+dealMarker.title+'!</h4>'+'<p id="popup-description">'+dealMarker.description+'</p><p id="pop-up-timer"></p></div>');
+     $('#nav_bottom').append('<div id="popup_deal"><div id="deal_image"></div><div id="popup-header"><h4>'+dealMarker.title+'!</h4></div>'+'<div id="popup-description"><p>'+dealMarker.description+'</p></div><div id="popup-footer"></div></div>');
      $('#nav_bottom').show("slowly");
 
      countdown.stop();

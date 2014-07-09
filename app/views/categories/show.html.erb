@@ -31,8 +31,12 @@
             <div class="deal-title-box">
               <h2><%= deal.title %></h2>
             </div>
-            <h4><%= deal.description %></h4>
-            <h4><%= deal.finish_time %></h4>
+            <div class="deal-display-description">
+              <h5><%= deal.description %></h5>
+            </div>
+            <div class="deal-display-footer">
+              <h4><%= deal.finish_time.strftime("%A %I:%M %P") %></h4>
+            </div>
           </div>
         <% end %>
       </div>
