@@ -11,7 +11,8 @@ BODY
 .business-profile-container {
   width: 100%;
   height:100%;
-  background-image: url("bg.jpg");
+  background-image: url("bgimage.jpg");
+  background-size: 70%;
   padding-top: 50px;
 }
 
@@ -91,18 +92,37 @@ BUSINESSES DEALS LISTINGS (RIGHT SIDE)
 	font-size: 20px;
 	text-align: left;
 	height: 100%;
-	margin-left: 10%;
-	margin-top: 40px;
+  background-color: #F7F7F7;
+  margin: auto;
+  width: 66%;
+  color: #414141;
+  border-radius: 5px;
+  margin-top: 40px;
 }
 
 .new-deal-form-container form {
-	margin-left: 90px;
+  padding-left: 50px;
+  margin-top: 20px;
 }
-
 .new-deal-form-container h2 {
 	text-align: center;
 }
 
+.new-form-header-2 {
+  background-color: #FFF;
+}
+
+.new-form-header-2 h2 {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.stripe.profile-stripe {
+  height: 0;
+  padding-top: 0;
+}
 
 .new-deal-field {
 	width: 350px;
@@ -113,51 +133,21 @@ BUSINESSES DEALS LISTINGS (RIGHT SIDE)
 	color: black;
 }
 
-
-label.live-deal-field {
-	margin-top: 20px;
-	background-color: red;
-}
-
 .launch-deal-btn {
-	text-align: center;
 	background-image: url("launch.png");
-	margin-left: 15%;
-	margin-top: 50px;
+	margin-left: 20%;
+  margin-bottom: 10px;
 	height: 50px;
 	width: 200px;
 }
 
-.outline-inward {
-  display: inline-block;
-  position: relative;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
-.outline-inward:before {
-  pointer-events: none;
-  content: '';
-  position: absolute;
-  border: #e1e1e1 solid 4px;
-  top: -16px;
-  right: -16px;
-  bottom: -16px;
-  left: -16px;
-  opacity: 0;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: top, right, bottom, left;
-  transition-property: top, right, bottom, left;
-}
-.outline-inward:hover:before, .outline-inward:focus:before, .outline-inward:active:before {
-  top: -8px;
-  right: -8px;
-  bottom: -8px;
-  left: -8px;
-  opacity: 1;
+#deal-image-uploader {
+  margin-bottom: 10px;
 }
 
+.biz-name-span {
+  color: #D95ABB;
+}
 
 /*************************************
               MEDIA QUERIES
