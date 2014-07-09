@@ -27,9 +27,7 @@ function haveGeolocation() {
 
     function processDeals(data) {
       $.each(data,function(index, deal){
-
         var markerCoords = new google.maps.LatLng(deal.latitude, deal.longitude);
-
         var startTime = moment(deal.start_time).toDate();
         var finishTime = moment(deal.finish_time).toDate();
         createMarker(markerCoords, deal.title, deal.id, deal.deal_image, deal.description, startTime, finishTime);
@@ -54,11 +52,15 @@ function createMarker(markerCoords, title, id, deal_image, description, start_ti
     finish_time: finish_time
   });
 
+  var source = $("#deal-template").html();
+  var template = Handlebars.compile(source);
+  var context = { title: dealMarker.title, description: dealMarker.description };
+  var html = template(context);
 
   google.maps.event.addListener(dealMarker, 'click', function() {
      $('#nav_bottom').hide();
      $('#nav_bottom').empty();
-     $('#nav_bottom').append('<div id="popup_deal"><div id="deal_image"></div><h4>'+dealMarker.title+'!</h4>'+'<p id="popup-description">'+dealMarker.description+'</p><p id="pop-up-timer"></p></div>');
+     $('#nav_bottom').append(html);
      $('#nav_bottom').show("slowly");
 
      countdown.stop();
