@@ -75,9 +75,6 @@ function Countdown() {
   } else {
     secondElem = '00';
   }
-
-
-
     if (this.onUpdate)
       //this.onUpdate(days + " days, " + hourElem + minuteElem  + secondElem);
       this.onUpdate(hourElem + minuteElem  + secondElem);

@@ -10,15 +10,19 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+
+
+//= require countdown
+//= require geo
+//= require google_maps
+//= require handlebars
 //= require jquery
 //= require jquery_ujs
-//= require google_maps
 //= require moment
+//= require modernizr
 
 //= require customselect
 
-//= require modernizr
-//= require countdown
-//= require geo
+//= require applicationView
 
 //= require_tree .
