@@ -13,7 +13,7 @@ Subito::Application.routes.draw do
   resources :categories, only:[:index, :show]
   resources :deals, only:[:index, :create, :new]
 
-  resources :businesses, only:[] do
+  scope "businesses/:business_id",  as: :business do
     resources :deals, only:[:index]
   end
 
