@@ -149,6 +149,10 @@ BUSINESSES DEALS LISTINGS (RIGHT SIDE)
   color: #D95ABB;
 }
 
+.biz-name-deals-header {
+  font-size: 25px;
+}
+
 /*************************************
               MEDIA QUERIES
 **************************************/
@@ -169,16 +173,71 @@ BUSINESSES DEALS LISTINGS (RIGHT SIDE)
       width: 95%;
     }
 
+    .biz-name-deals-header {
+      font-size: 23px;
+    }
+
   }
 
-
-   @media (max-width:1200px) and (min-width:700px){
+   @media (max-width:900px) and (min-width:700px){
     .listed-deal{
       width: 90%;
     }
+
+     .new-deal-field {
+      width: 250px;
+    }
+
+    .new-deal-form-container form {
+      font-size: 15px;
+    }
+
+    .launch-deal-btn {
+      margin-left: 10%;
+    }
+
+    .new-deal-form-container {
+      width: 90%;
+    }
+
+    .new-deal-form-container form{
+      padding-left: 30px;
+    }
+
+    .biz-name-deals-header {
+      font-size: 18px;
+    }
   }
 
-   @media (max-width:1800px) and (min-width:1200px){
+
+   @media (max-width:1300px) and (min-width:900px){
+    .listed-deal{
+      width: 90%;
+    }
+
+     .new-deal-field {
+      width: 250px;
+    }
+
+    .new-deal-form-container form {
+      font-size: 17px;
+    }
+
+    .launch-deal-btn {
+      margin-left: 10%;
+    }
+
+    .new-deal-form-container {
+      width: 70%;
+    }
+
+    .new-deal-form-container form{
+      padding-left: 30px;
+    }
+
+  }
+
+   @media (max-width:1800px) and (min-width:1300px){
     .listed-deal{
       width: 46%;
     }
@@ -188,6 +247,7 @@ BUSINESSES DEALS LISTINGS (RIGHT SIDE)
     .listed-deal{
       width: 30%;
     }
+
   }
 
 	
