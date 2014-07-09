@@ -4,7 +4,7 @@ Subito::Application.routes.draw do
   devise_for :businesses, path_names: {sign_in: "login", sign_out: "logout"},
                           controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
-  root to: "categories#index"
+  root to: "categories#show", id: 1
 
   get "/getdeals", to: "categories#getdeals"
 
