@@ -1,67 +1,63 @@
 <div class="index-container">
   <div class= "full-show-container">
 
-  <div class="categories-full-right-pane">
+    <div class="categories-full-right-pane">
 
-    <div class="choose-category">
+      <div class="choose-category">
 
-      <div class="categories-right-pane-header">
-          <h3 class="show-nearby">Shoing nearby deals in: </h3>
-      </div>
+        <div class="categories-right-pane-header">
+            <h3 class="show-nearby">Shoing nearby deals in: </h3>
+        </div>
 
-      <div id="category-menu">
-        <div id="select-wrapper">
-            <select id="page-select" class="styled">
-            <option value="/categories">All</option>
-            <% @categories.each do |category| %>
-             <option <% if category== @category%>selected = "selected" <% end %>value="<%= category_path(category) %>"><%= category.name %></option>
-            <% end %>
-            </select>
+        <div id="category-menu">
+          <div id="select-wrapper">
+              <select id="page-select" class="styled">
+              <option value="/categories">All</option>
+              <% @categories.each do |category| %>
+               <option <% if category== @category%>selected = "selected" <% end %>value="<%= category_path(category) %>"><%= category.name %></option>
+              <% end %>
+              </select>
+          </div>
+        </div>
+
+        <div class="stripe">
+          <div class="line line-btm"></div>
         </div>
       </div>
 
-      <div class="stripe">
-        <div class="line line-btm"></div>
+      <div class="deal-display-container">
+        <% @deals.each do |deal| %>
+          <div class="deal-display-element">
+            <div class="deal-title-box">
+              <h2><%= deal.title %></h2>
+            </div>
+            <h4><%= deal.description %></h4>
+            <h4><%= deal.finish_time %></h4>
+          </div>
+        <% end %>
       </div>
-
     </div>
 
-        <div class="deal-display-container">
-          <% @deals.each do |deal| %>
-            <div class="deal-display-element">
-              <div class="deal-title-box">
-                <h2><%= deal.title %></h2>
-              </div>
-              <h4><%= deal.description %></h4>
-              <h4><%= deal.finish_time %></h4>
-            </div>
-          <% end %>
 
-        </div>
-      </div>
-
-
-      <div class="map-canvas-container">
-
-
-      <ul class="map-view-navbar">
-
-        <li><h2><%= @category.name %></h2></li>
-
-
-        <li><img src="/assets/radius.png" id="radius"></li>
-      </ul>
+    <div class="map-canvas-container">
 
         <ul class="map-view-navbar">
-        g  <li><h2><%= @category.name %></h2></li>
+
+          <li><h2><%= @category.name %></h2></li>
+
+
           <li><img src="/assets/radius.png" id="radius"></li>
         </ul>
 
-        <div id="map-canvas"></div>
-        <div id="nav_bottom"></div>
+          <ul class="map-view-navbar">
+          g  <li><h2><%= @category.name %></h2></li>
+            <li><img src="/assets/radius.png" id="radius"></li>
+          </ul>
 
-
-      </div>
+          <div id="map-canvas"></div>
+          <div id="nav_bottom"></div>
+    </div>
+    
   </div>
 </div>
 

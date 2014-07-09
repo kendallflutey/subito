@@ -104,3 +104,36 @@ html, body {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
+
+
+
+/*************************************
+              MEDIA QUERIES
+**************************************/
+
+
+  @media (max-width: 584px){
+  	.sign-up-form-container {
+  		margin-left: 15%;
+  	}
+
+  }
+
+   @media (max-width:980px) and (min-width:584px){
+   	.sign-up-form-container {
+   		margin-left: 20%;
+   	}
+  }
+
+   @media (max-width:1200px) and (min-width:980px){
+    .sign-up-form-container {
+    	margin-left: 25%;
+    }
+  }
+
+  @media (min-width:1200px){
+    
+  }
+
+
+
