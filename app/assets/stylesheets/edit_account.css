@@ -32,22 +32,87 @@
 .right-side-account-leave {
   height: 100%;
   position: absolute;
-  left: 50%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  left: 60%;
   min-width: 50%;
-  /*background-color: yellow;*/
   background-image: url("bg.jpg");
 }
 
 .cancel-account {
 	margin-top: 30%;
-	margin-left: 20%;
+	margin-left: 15%;
 	color: #414141;
 }
 
+.cancel-account p {
+	margin-left: 90px;
+}
 
+.cancel-options {
+	margin-top: 20px;
+	padding: 0;
+}
 
+.cancel-options ul {
+	padding: 0;
+}
+
+.cancel-options li {
+	display: inline-block;
+}
+
+.cancel-options .first {
+	margin-right: 50px;
+}
+
+.cancel-options a {
+	font-size: 10px;
+	padding: 19px 70px;	
+	background-image: url("keep-account.png");
+}
+
+.cancel-btn{
+	border: none;
+	background-color: transparent; 
+	background-image: url("delete-account.png"); 
+	padding: 20px 70px;	
+	font-size: 10px;
+}
+
+.cancel-btn:hover {
+	cursor: pointer;
+}
+
+/*************************************
+   EDIT ACCOUNT (LEFT SIDE)
+**************************************/
+
+.edit-account{
+  height: 100%;
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  left: 0;
+  right: 40%;
+  top: 0;
+  background-color: purple;
+}
+
+.left-side-account-edit {
+  height: 100%;
+  width: 100%;
+  background-color: yellow;
+  margin-top: 60px;
+}
+
+.left-side-account-edit h2 {
+	text-align: center;
+	margin-top: 20%;
+}
+
+.edit-account-form {
+	background-color: orange;
+	margin-left: 40px;
+}
 
 /*.edit-account {
 	float: left;
@@ -80,37 +145,3 @@
 	width: 200px;
 }
 
-.cancel-account {
-	color: #FFF;
-	margin-top: 20%;
-}
-
-.cancel-options {
-	margin-top: 20px;
-}
-
-.cancel-options li {
-	display: inline-block;
-}
-
-.cancel-options .first {
-	margin-right: 50px;
-}
-
-.cancel-options a {
-	font-size: 10px;
-	padding: 19px 70px;	
-	background-image: url("keep-account.png");
-}
-
-.cancel-btn{
-	border: none;
-	background-color: transparent; 
-	background-image: url("delete-account.png"); 
-	padding: 20px 70px;	
-	font-size: 10px;
-}
-
-.cancel-btn:hover {
-	cursor: pointer;
-}*/
