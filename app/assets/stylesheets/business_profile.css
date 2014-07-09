@@ -38,15 +38,26 @@ BUSINESSES DEALS LISTINGS (RIGHT SIDE)
 
 .biz-name-deals-header {
   text-align: center;
-  margin-top: 40px;
+
   margin-bottom: 0;
   padding-bottom: 0;
+  color: #414141;
+}
+
+.header-profile-container {
+  padding-top: 20px;
+  background-color: #FFF;
+  padding-bottom: 20px;
 }
 
 .business-deals-container {
   width: 100%;
   height:100%;
   margin-top: 30px;
+}
+
+.stripe.profile-stripe {
+  height: 0;
 }
 
 .listed-deal {
@@ -153,7 +164,7 @@ label.live-deal-field {
 **************************************/
 
 
-  @media (max-width: 584px){
+  @media (max-width: 700px){
 
     .profile-new-deals-container {
       display: none;
@@ -164,9 +175,14 @@ label.live-deal-field {
       left: 0;
     }  
 
+     .listed-deal{
+      width: 95%;
+    }
+
   }
 
-   @media (max-width:1200px) and (min-width:584px){
+
+   @media (max-width:1200px) and (min-width:700px){
     .listed-deal{
       width: 90%;
     }
