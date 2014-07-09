@@ -154,7 +154,7 @@
   padding:0;
   font-size: 20px;
   margin-top: 15px;
-  padding-left: 7px;
+  padding-left: 15px;
 }
 
 .deal-display-description{
@@ -164,8 +164,9 @@
 
 .deal-display-description h5{
   margin-top: 15px;
-  padding-left: 0px;
+  padding-left: 10px;
   font-size: 20px;
+  line-height: 140%;
 
 }
 
