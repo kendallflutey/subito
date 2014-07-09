@@ -1,5 +1,0 @@
-class BusinessesController <ApplicationController
-
-
-
-end
