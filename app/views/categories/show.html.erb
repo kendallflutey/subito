@@ -74,9 +74,11 @@ $(document).ready(function() {
 
 <script id="deal-template" type="text/x-handlebars-template">
   <div id="popup_deal">
-    <div id="deal_image"></div>
+    <div id="deal_image" style={{ image }}>
+    </div>
+    <div id="popup-header">
     <h4>{{ title }}</h4>
-    <p id="popup-description">{{ description }}</p>
-    <p id="pop-up-timer"></p>
+    </div><div id="popup-description"><p>{{ description }}</p></div><div id="popup-footer">
+    </div>
   </div>
 </script>

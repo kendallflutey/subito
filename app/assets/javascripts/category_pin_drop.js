@@ -54,16 +54,19 @@ function createMarker(markerCoords, title, id, deal_image, description, start_ti
 
   var source = $("#deal-template").html();
   var template = Handlebars.compile(source);
-  var context = { title: dealMarker.title, description: dealMarker.description };
+  var context = {
+    image: "content: url(\''+(dealMarker.deal_image['url'])+'\');",
+    title: dealMarker.title,
+    description: dealMarker.description
+  };
   var html = template(context);
 
   google.maps.event.addListener(dealMarker, 'click', function() {
      $('#nav_bottom').hide();
      $('#nav_bottom').empty();
-     $('#nav_bottom').append('<div id="popup_deal"><div id="deal_image" style="content: url(\''+(dealMarker.deal_image['url'])+'\');"></div><div id="popup-header"><h4>'+dealMarker.title+'!</h4></div>'+'<div id="popup-description"><p>'+dealMarker.description+'</p></div><div id="popup-footer"></div></div>');
      $('#nav_bottom').append(html);
      $('#nav_bottom').show("slowly");
-    
+
 
      countdown.stop();
      countdown.onUpdate = function(formattedTimeLeft) { $('#pop-up-timer').html(formattedTimeLeft); };
