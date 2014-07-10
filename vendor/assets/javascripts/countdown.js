@@ -22,7 +22,6 @@ function Countdown() {
 
   this.end = function(finishTime) {
     targetEndTime = finishTime;
-    // interval = setInterval(this.update, 1000);
     interval = setInterval((function(self) {
       return function() { self.update(); }
     })(this), 1000);

@@ -70,11 +70,6 @@ describe DealsController do
 	      		expect(response).to redirect_to(business_deals_url(my_deal[:business_id]))
     		end
 
-    		it "displays a flash notice when saved" do 
-    			post :create, deal: my_deal
-    			flash[:notice].should_not be_nil
-    		end
-
     		it "responds with OK" do 
     			response.code.should eq("200")
     		end

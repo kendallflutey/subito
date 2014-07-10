@@ -11,7 +11,6 @@ Business.create(name: "Ekim Burger",
 				email: "ekim@burger.com",
 				password: "ekim123")
 
-
 Business.create(name: "Fidels",
 				address: "234 Cuba St, Te Aro 6011",
 				phone: "04 533 6868",

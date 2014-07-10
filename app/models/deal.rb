@@ -21,9 +21,4 @@ class Deal < ActiveRecord::Base
   	end
   end
 
-  # def less_than_four_hours?
-  # 	if ((finish_time - start_time) * 24 * 60 ) > 240
-  # 		errors.add(:finish_time, "Deals can only be four hours max")
-  # 	end
-  # end
 end

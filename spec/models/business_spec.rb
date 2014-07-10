@@ -8,7 +8,7 @@ describe Business do
 
 	it { should validate_uniqueness_of :email }
 
-	it { should_not allow_value("kendallflutey.com").for(:email) }
+	it { should_not allow_value("mickey.com").for(:email) }
 
 	context "email validation" do 
 

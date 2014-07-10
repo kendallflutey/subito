@@ -7,7 +7,6 @@ class DealsController < ApplicationController
     @deal = Deal.new(params[:deal])
 
     if @deal.save
-      flash[:notice] = "Your deal was created and will start at: #{@deal.start_time}"
       redirect_to business_deals_path(current_business)
     else
       render :new
@@ -22,7 +21,6 @@ class DealsController < ApplicationController
     @deal = Deal.new(params[:deal])
 
     if @deal.save
-      flash[:notice] = "Your deal was created and will start at: #{@deal.start_time}"
       redirect_to business_deals_path(current_business)
     else
       render :new
